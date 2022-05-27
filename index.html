@@ -4,9 +4,344 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DOTA OBSERVER</title>
+    <title>DOTAOBSERVE</title>
+    <link rel="icon" type="image/x-icon" href="/images/Observer_Ward_model.png">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <!-- icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
+    <style>
+        body {
+            background-color: #222831;
+            color: white;
+        }
+
+        header, footer {
+            background-color: #F05454;
+        }
+
+        .separator {
+            display: flex;
+            align-items: center;
+            text-align: center;
+        }
+
+        .separator::before,
+        .separator::after {
+            content: '';
+            flex: 1;
+            border-bottom: 1px solid #DDDDDD;
+        }
+
+        .separator:not(:empty)::before {
+            margin-right: .25em;
+        }
+
+        .separator:not(:empty)::after {
+            margin-left: .25em;
+        }
+
+        .front-page {
+            background-color: #30475E;
+            margin-top: 10vh;
+        }
+
+        .creator-date {
+          font-size: 12px;
+        }
+        
+        dt {
+            margin-bottom: 0.8em;
+        }
+
+        dd {
+            display: list-item;
+            list-style-type: disc;
+            margin-left: 2em;
+        }
+
+        footer {
+            margin-top: 4vh;
+        }
+    </style>
 </head>
 <body>
-    
+  <!-- Navbar -->
+    <nav class="navbar fixed-top container-lg rounded-bottom navbar-dark bg-danger navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand text-white" href="#">
+                <img src="images/Observer_Ward_model.png" width="40px" alt="">
+                DOTAOBSERVE
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="navbar-nav ms-auto">
+                  <a class="nav-link fw-bold" aria-current="page" href="#news">News</a>
+                  <a class="nav-link fw-bold" href="#rankings">DPC Rankings</a>
+                  <a class="nav-link fw-bold" href="#patch-notes">Patch Notes</a>
+                  <a class="nav-link fw-bold" href="#vods">VODs</a>
+                </div>
+            </div>
+          </div>
+        </div>
+    </nav>
+    <main>
+        <!-- Main page -->
+        <div class="front-page container-lg p-3 rounded-3">
+
+            <!-- News -->
+            <div class="separator fs-1 mb-3" id="news">News</div>
+            
+            <div class="container-lg mb-5">
+                <div class="row mb-5">
+                    <div class="col-lg-7 p-2">
+                        <img src="images/news-main.jpg" width=100% alt="">
+                    </div>
+                    <div class="col-lg p-2 d-flex flex-column justify-content-around">
+                        <div>
+                            <p class="fs-4 m-0">
+                                ESL One Stockholm Preview: EEU and NA
+                            </p>
+                            <p class="creator-date mb-5">
+                                by anonymous12345 on May 8th, 2022
+                            </p>
+                        </div>
+                        <!-- <div class="fs-6 mb-3">by anonymous12345 on May 8th, 2022</div> -->
+                        <p class="text-lg-start">
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium magni asperiores amet itaque harum beatae dignissimos
+                            necessitatibus porro veniam blanditiis tenetur repellendus esse nostrum possimus temporibus quidem a sint reprehenderit
+                            repudiandae vero, similique aliquid minima ullam quasi?
+                        </p>
+                        <a class="btn btn-danger align-self-center" href="#" role="button">Read More</a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg d-flex flex-column">
+                        <img src="images/news1.jpg" class="img-fluid mb-3" alt="">
+                        <p>Fun facts about ESL One Stockholm Major 2022</p>
+                    </div>
+                    <div class="col-lg d-flex flex-column">
+                        <img src="images/news2.jpg" class="img-fluid mb-3" alt="">
+                        <p>Evil Geniuses remove JerAx from the roster</p>
+                    </div>
+                    <div class="col-lg d-flex flex-column">
+                        <img src="images/news3.jpg" class="img-fluid mb-3" alt="">
+                        <p>Team Secret sign Crystallis to the roster</p>
+                    </div>
+                    <div class="col-lg d-flex flex-column">
+                        <img src="images/news4.jpg" class="img-fluid mb-3" alt="">
+                        <p>OG blow away the competition at ESL One Stockholm Major to claim the trophy</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DPC Rankings -->
+            <div class="separator fs-1 mb-3" id="rankings">Top 20 DPC Rankings</div>
+
+            <div class="d-flex flex-column align-items-center">
+              <p>Only top 12 teams get a direct invite to The International 11.</p>
+              <p>Click on a row for more details on the team.</p>
+            <table class="table table-light table-striped table-bordered table-sm w-75 mb-5">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Teams</th>
+                    <th scope="col">Points</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="table-success">
+                    <th scope="row">1</th>
+                    <td>PSG.LGD</td>
+                    <td>1400</td>
+                  </tr>
+                  <tr class="table-success">
+                    <th scope="row">2</th>
+                    <td>TSM</td>
+                    <td>1280</td>
+                  </tr>
+                  <tr class="table-success">
+                    <th scope="row">3</th>
+                    <td>OG</td>
+                    <td>1140</td>
+                  </tr>
+                  <tr class="table-success">
+                    <th scope="row">4</th>
+                    <td>Gaimin Gladiators</td>
+                    <td>1130</td>
+                  </tr>
+                  <tr class="table-success">
+                    <th scope="row">5</th>
+                    <td>Thunder Awaken</td>
+                    <td>1040</td>
+                  </tr>
+                  <tr class="table-success">
+                    <th scope="row">6</th>
+                    <td>Beastcoast</td>
+                    <td>995</td>
+                  </tr>
+                  <tr class="table-success">
+                    <th scope="row">7</th>
+                    <td>Fnatic</td>
+                    <td>820</td>
+                  </tr>
+                  <tr class="table-success">
+                    <th scope="row">8</th>
+                    <td>Team Spirit</td>
+                    <td>790</td>
+                  </tr>
+                  <tr class="table-success">
+                    <th scope="row">9</th>
+                    <td>Tundra Esports</td>
+                    <td>712</td>
+                  </tr>
+                  <tr class="table-success">
+                    <th scope="row">10</th>
+                    <td>BetBoom Team</td>
+                    <td>640</td>
+                  </tr>
+                  <tr class="table-success">
+                    <th scope="row">11</th>
+                    <td>Team Aster</td>
+                    <td>640</td>
+                  </tr>
+                  <tr class="table-success">
+                    <th scope="row">12</th>
+                    <td>BOOM</td>
+                    <td>622.5</td>
+                  </tr>
+                  <tr class="table-danger">
+                    <th scope="row">13</th>
+                    <td>Team Liquid</td>
+                    <td>590</td>
+                  </tr>
+                  <tr class="table-danger">
+                    <th scope="row">14</th>
+                    <td>Evil Geniuses</td>
+                    <td>552.5</td>
+                  </tr>
+                  <tr class="table-danger">
+                    <th scope="row">15</th>
+                    <td>T1</td>
+                    <td>328.3</td>
+                  </tr>
+                  <tr class="table-danger">
+                    <th scope="row">16</th>
+                    <td>Quincy Crew</td>
+                    <td>282.49</td>
+                  </tr>
+                  <tr class="table-danger">
+                    <th scope="row">17</th>
+                    <td>Xtreme Gaming</td>
+                    <td>240</td>
+                  </tr>
+                  <tr class="table-danger">
+                    <th scope="row">18</th>
+                    <td>RNG</td>
+                    <td>238.42</td>
+                  </tr>
+                  <tr class="table-danger">
+                    <th scope="row">19</th>
+                    <td>INF.UESPORTS</td>
+                    <td>190.72</td>
+                  </tr>
+                  <tr class="table-danger">
+                    <th scope="row">20</th>
+                    <td>PuckChamp</td>
+                    <td>180</td>
+                  </tr>
+                </tbody>
+            </table>
+            </div>
+            <!-- Patch Notes -->
+            <div class="separator fs-1 mb-3" id="patch-notes">Patch Notes</div>
+
+            <div class="container-lg mb-5">
+              <div class="row mb-5">
+                  <div class="col-lg p-2 d-flex flex-column justify-content-evenly align-items-center">
+                      <div class="d-flex flex-column align-items-center">
+                          <p class="fs-1 m-0">
+                              Version 7.31c
+                          </p>
+                          <p class="creator-date m-0">
+                              Released on May 4th, 2022
+                          </p>
+                      </div>
+                      <p class="text-lg-start">
+                          <dl>
+                            <h4>Notable changes:</h4>
+                            <dt><img class="me-2" src="images\Harpy_Scout_icon.webp" alt="">Harpy Scout</dt>
+                            <dd>Take Off max mana cost per second from 2.5% to 4%</dd>
+                            <dd>Vision reduced from 1800/1800 to 1200/800</dd>
+                            
+                            <dt><img class="me-2" src="images\Dark_Troll_Summoner_icon.webp" alt="">Dark Troll Summoner</dt>
+                            <dd>Cooldown increased from 18 to 20</dd>
+                            <dd>Duration decreased from 40 to 35</dd>
+
+                            <dt><img class="me-2" src="images\Dark_Troll_Summoner_Skeleton_Warrior_icon.webp" alt="">Skeleton Warrior</dt>
+                            <dd>Movement/Attack Speed slow against melee heroes rescaled from 25/25% to 20/30%</dd>
+                            <dd>Movement/Attack Speed slow against ranged heroes rescaled from 50/50% to 40/60%</dd>
+
+                            <dt><img class="me-2" src="images\Storm_Spirit_icon.webp" alt="">Storm Spirit</dt>
+                            <dd>Base armor reduced by 1</dd>
+                            <dd>Level 10 mana regeneration talent reduced from +1.75 to +1.5</dd>
+                          </dl>
+                      </p>
+                      <a class="btn btn-danger" href="#" role="button">Read More</a>
+                  </div>
+              </div>
+            </div>
+
+            <!-- VODs -->
+            <div class="separator fs-1 mb-3" id="vods">Dota 2 VODs</div>
+
+            <div class="container-lg mb-5">
+              <div class="row">
+                <div class="col-lg d-flex flex-column">
+                  <div class="ratio ratio-16x9">
+                    <iframe src="https://www.youtube.com/embed/jmVFD0tQGB8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  </div>
+                  <p class="m-1">OG vs TSM FTX - GRAND FINAL 🏆 - ESL ONE STOCKHOLM 2022 MAJOR DOTA 2</p>
+                  <p class="creator-date m-1 mb-5">May 23, 2022</p>
+                </div>
+                <div class="col-lg d-flex flex-column">
+                  <div class="ratio ratio-16x9">
+                    <iframe src="https://www.youtube.com/embed/mLmCCdlPL8w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  </div>
+                  <p class="m-1">OG vs TUNDRA - SEMI-FINAL - ESL ONE STOCKHOLM 2022 MAJOR DOTA 2</p>
+                  <p class="creator-date m-1 mb-5">May 22, 2022</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg d-flex flex-column">
+                  <div class="ratio ratio-16x9">
+                    <iframe src="https://www.youtube.com/embed/w6aZP40V31c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  </div>
+                  <p class="m-1">OG vs GAIMIN GLADIATORS - PLAYOFFS ELIMINATION - ESL ONE STOCKHOLM 2022 MAJOR DOTA 2</p>
+                  <p class="creator-date m-1 mb-5">May 22, 2022</p>
+                </div>
+                <div class="col-lg d-flex flex-column">
+                  <div class="ratio ratio-16x9">
+                    <iframe src="https://www.youtube.com/embed/r7czll-wt2E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  </div>
+                  <p class="m-1">TUNDRA vs TSM FTX - SEMI-FINAL - ESL ONE STOCKHOLM 2022 MAJOR DOTA 2</p>
+                  <p class="creator-date m-1 mb-5">May 22, 2022</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="d-flex align-items-center justify-content-center mb-3">
+              <a class="btn btn-danger" href="#" role="button">More VODs</a>
+            </div>
+
+        </div>
+    </main>
+    <footer class="d-flex container-lg rounded-top bg-danger align-items-center justify-content-center">
+      <p class="m-0 p-3">Copyright © 2022 KodeGo.gg. All rights reserved.</p>
+    </footer>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 </body>
 </html>
