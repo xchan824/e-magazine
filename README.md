@@ -1,9 +1,9 @@
 <h1>Mini Project 1: Dota 2 Website</h1>
 
-<h3>Technologies used:</h3>
+<h2>Technologies used</h2>
 HTML, Vanilla CSS, Bootstrap 5.2
 
-<h3>Project Description:</h3>
+<h2>Project Description</h2>
 
 • The e-magazine’s content will contain Dota 2 recent news, patch descriptions, team leaderboards, and recent VODs (videos-on-demand)
 
@@ -11,7 +11,7 @@ HTML, Vanilla CSS, Bootstrap 5.2
 
 • The e-magazine will provide up-to-date information for players, according to the content that they choose to visit on the e-magazine
 
-<h3>Deliverables and Goals</h3>
+<h2>Deliverables and Goals</h2>
 
 • Project Timeline
 	Homepage – 1 day
@@ -20,6 +20,8 @@ HTML, Vanilla CSS, Bootstrap 5.2
 
 • Responsive web design should be used in every web page whenever possible. Designing for mobile is top priority.
 
-<h3>Hierarchical Sitemap</h3>
+<h2>Hierarchical Sitemap</h2>
 
 <img src="images\sitemap.PNG" alt="">
+
+<h2>Inspirations</h2>
