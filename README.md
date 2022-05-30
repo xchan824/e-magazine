@@ -5,20 +5,20 @@ HTML, Vanilla CSS, Bootstrap 5.2
 
 <h2>Project Description</h2>
 
-• The e-magazine’s content will contain Dota 2 recent news, patch descriptions, team leaderboards, and recent VODs (videos-on-demand)
+The e-magazine’s content will contain Dota 2 recent news, patch descriptions, team leaderboards, and recent VODs (videos-on-demand)
 
-• The e-magazine will be built for Dota 2 players
+The e-magazine will be built for Dota 2 players
 
-• The e-magazine will provide up-to-date information for players, according to the content that they choose to visit on the e-magazine
+The e-magazine will provide up-to-date information for players, according to the content that they choose to visit on the e-magazine
 
 <h2>Deliverables and Goals</h2>
 
-• Project Timeline<br>
-<span style="text-indent: 50px;">Homepage – 1 day<br></span>
-<span style="text-indent: 50px;">Subpages – 1 day each, 4 pages, total of 4 days<br></span>
-<span style="text-indent: 50px;">Furnishing of pages – until deadline of submission<br></span>
+Project Timeline<br>
+<span style="text-indent: 50px;">• Homepage – 1 day<br></span>
+<span style="text-indent: 50px;">• Subpages – 1 day each, 4 pages, total of 4 days<br></span>
+<span style="text-indent: 50px;">• Furnishing of pages – until deadline of submission<br></span>
 
-• Responsive web design should be used in every web page whenever possible. Designing for mobile is top priority.
+Responsive web design should be used in every web page whenever possible. Designing for mobile is top priority.
 
 <h2>Hierarchical Sitemap</h2>
 
