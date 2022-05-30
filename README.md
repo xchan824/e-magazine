@@ -13,13 +13,11 @@ HTML, Vanilla CSS, Bootstrap 5.2
 
 <h2>Deliverables and Goals</h2>
 
-<ul>
-• Project Timeline
-    <li>Homepage – 1 day</li>
-    <li>Subpages – 1 day each, 4 pages, total of 4 days</li>
-    <li>Furnishing of pages – until deadline of submission</li>
-</ul>
-	
+• Project Timeline<br>
+<span style="text-indent: 50px;">Homepage – 1 day<br></span>
+<span style="text-indent: 50px;">Subpages – 1 day each, 4 pages, total of 4 days<br></span>
+<span style="text-indent: 50px;">Furnishing of pages – until deadline of submission<br></span>
+
 • Responsive web design should be used in every web page whenever possible. Designing for mobile is top priority.
 
 <h2>Hierarchical Sitemap</h2>
@@ -35,6 +33,7 @@ HTML, Vanilla CSS, Bootstrap 5.2
 
 <h2>Conclusions, Challenges and Future Improvements (my opinions only)</h2>
 
-• Bootstrap does not scale well with project sizes
-• Overall web page design can be improved further
+• Bootstrap does not scale well with project sizes, hard to maintain<br>
+• Overall web page design can be improved further<br>
+• There are contents that I probably forgot to put on the web page. Knowledge of how a site should look and feel is also essential (comes with lots of practice)<br>
 
