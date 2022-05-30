@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patch Notes | DOTAOBSERVE</title>
+    <link rel="icon" type="image/x-icon" href="/images/Observer_Ward_model.png">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <!-- icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
+    <style>
+        body {
+            background-color: #222831;
+            color: white;
+        }
+
+        header, footer {
+            background-color: #F05454;
+        }
+
+        .separator {
+            display: flex;
+            align-items: center;
+            text-align: center;
+        }
+
+        .separator::before,
+        .separator::after {
+            content: '';
+            flex: 1;
+            border-bottom: 1px solid #DDDDDD;
+        }
+
+        .separator:not(:empty)::before {
+            margin-right: .25em;
+        }
+
+        .separator:not(:empty)::after {
+            margin-left: .25em;
+        }
+
+        .front-page {
+            background-color: #30475E;
+            margin-top: 10vh;
+        }
+
+        .creator-date {
+          font-size: 14px;
+        }
+        
+        dt {
+            margin-bottom: 0.8em;
+        }
+
+        dd {
+            display: list-item;
+            list-style-type: disc;
+            margin-left: 2em;
+        }
+
+        footer {
+            margin-top: 4vh;
+        }
+
+        .list-group-item.active {
+            background-color: #dc3545;
+            border-color: #dc3545;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar fixed-top container-lg rounded-bottom navbar-dark bg-danger navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand text-white" href="#">
+                <img src="images/Observer_Ward_model.png" width="40px" alt="">
+                DOTAOBSERVE
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="navbar-nav ms-auto">
+                  <a class="nav-link disabled fw-bold" aria-current="page" href="">News</a>
+                  <a class="nav-link disabled fw-bold" href="">DPC Rankings</a>
+                  <a class="nav-link active fw-bold" href="patch-notes.html">Patch Notes</a>
+                  <a class="nav-link disabled fw-bold" href="">VODs</a>
+                </div>
+            </div>
+          </div>
+        </div>
+    </nav>
+    <main>
+        <!-- Main page -->
+        <div class="front-page container-lg p-3 rounded-3">
+
+            <!-- News -->
+            <div class="container-lg mb-5">
+                <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                    <ol class="breadcrumb fs-4">
+                        <li class="breadcrumb-item"><button type="button" class="btn btn-danger"><a href="index.html" class="text-light text-decoration-none">Home</a></button>
+                        <li class="breadcrumb-item active" aria-current="page"><button type="button" class="btn btn-secondary" disabled><a href="index.html" class="text-light text-decoration-none">Patch Notes</a></button>
+                    </ol>
+                </nav>
+            </div>
+            
+            <div class="row justify-content-md-center">
+                <div class="col-lg-2 mb-5 d-flex justify-content-center">
+                  <div class="list-group" id="list-tab" role="tablist">
+                    <a class="list-group-item list-group-item-action active" id="list-7-31-c-list" data-bs-toggle="list" href="#list-7-31-c" role="tab" aria-controls="list-7-31-c">7.31c</a>
+                    <a class="list-group-item list-group-item-action" id="list-7-31-b-list" data-bs-toggle="list" href="#list-7-31-b" role="tab" aria-controls="list-7-31-b">7.31b</a>
+                    <a class="list-group-item list-group-item-action" id="list-7-31-list" data-bs-toggle="list" href="#list-7-31" role="tab" aria-controls="list-7-31">7.31</a>
+                    <a class="list-group-item list-group-item-action" id="list-7-30-e-list" data-bs-toggle="list" href="#list-7-30-e" role="tab" aria-controls="list-7-30-e">7.30e</a>
+                  </div>
+                </div>
+                <div class="col-lg-10">
+                  <div class="tab-content" id="nav-tabContent">
+                    <div class="tab-pane fade show active" id="list-7-31-c" role="tabpanel" aria-labelledby="list-7-31-c-list">
+                        <div class="d-flex flex-column align-items-center">
+                            <p class="fs-1 m-0">
+                                Version 7.31c
+                            </p>
+                            <p class="creator-date m-0">
+                                Released on May 4th, 2022
+                            </p>
+                        </div>
+                        <p class="text-lg-start">
+                            <dl>
+                                <h4>Neutral Creeps</h4><hr>
+                                <dt><img class="me-2" src="images\Harpy_Scout_icon.webp" alt="">Harpy Scout</dt>
+                                <dd>Take Off max mana cost per second from 2.5% to 4%</dd>
+                                <dd>Vision reduced from 1800/1800 to 1200/800</dd>
+                                
+                                <dt><img class="me-2" src="images\Dark_Troll_Summoner_icon.webp" alt="">Dark Troll Summoner</dt>
+                                <dd>Cooldown increased from 18 to 20</dd>
+                                <dd>Duration decreased from 40 to 35</dd>
+    
+                                <dt><img class="me-2" src="images\Dark_Troll_Summoner_Skeleton_Warrior_icon.webp" alt="">Skeleton Warrior</dt>
+                                <dd>Movement/Attack Speed slow against melee heroes rescaled from 25/25% to 20/30%</dd>
+                                <dd>Movement/Attack Speed slow against ranged heroes rescaled from 50/50% to 40/60%</dd>
+                                
+                                <h4 class="mt-5">Heroes</h4><hr>
+                                <dt><img class="me-2" src="images\Arc_Warden_icon.webp" alt="">Arc Warden</dt>
+                                <dd>Base damage increased from 47-57 to 51-57</dd>
+                                <dt><img class="me-2" src="images\Axe_icon.webp" alt="">Axe</dt>
+                                <dd>Base Health regeneration reduced from 2.75 to 2.5</dd>
+                                <dt><img class="me-2" src="images\Bane_icon.webp" alt="">Bane</dt>
+                                <dd>Fiend's Grip Max Channel time reduced from 6 to 5/5.5/6s</dd>
+                                <dt><img class="me-2" src="images\Bloodseeker_icon.webp" alt="">Bloodseeker</dt>
+                                <dd>Blood Mist self damage is now magical instead of Pure</dd>
+                                <dd>Blood Mist damage to enemies increased from 5% to 7%</dd>
+                                <dd>Blood Mist cooldown reduced from 4s to 3s</dd>
+                                <dt><img class="me-2" src="images\Broodmother_icon.webp" alt="">Broodmother</dt>
+                                <dd>Spin Web mana cost reduced from 50 to 40</dd>
+                                <dt><img class="me-2" src="images\Chaos_Knight_icon.webp" alt="">Chaos Knight</dt>
+                                <dd>Chaos Bolt shard bonus range decreased from 300 to 150</dd>
+                                <dd>Chaos Strike no longer applies Bonus damage to Creep Heroes and Roshan.</dd>
+                                <dt><img class="me-2" src="images\Chen_icon.webp" alt="">Chen</dt>
+                                <dd>Base Movement Speed increased from 300 to 305</dd>
+                                <dd>Hand of God cooldown decreased from 160/140/120 to 150/130/110</dd>
+                            </dl>
+                        </p>
+                    </div>
+                    <div class="tab-pane fade" id="list-7-31-b" role="tabpanel" aria-labelledby="list-7-31-b-list">
+                        <div class="d-flex flex-column align-items-center">
+                            <p class="fs-1 m-0">
+                                Version 7.31b
+                            </p>
+                            <p class="creator-date m-0">
+                                Released on February 28th, 2022
+                            </p>
+                        </div>
+                        <p class="text-lg-start">
+                            <dl>
+                                <h4>Neutral Creeps</h4><hr>
+                                <dt><img class="me-2" src="images\Harpy_Scout_icon.webp" alt="">Harpy Scout</dt>
+                                <dd>Take Off max mana cost per second from 2.5% to 4%</dd>
+                                <dd>Vision reduced from 1800/1800 to 1200/800</dd>
+                                
+                                <dt><img class="me-2" src="images\Dark_Troll_Summoner_icon.webp" alt="">Dark Troll Summoner</dt>
+                                <dd>Cooldown increased from 18 to 20</dd>
+                                <dd>Duration decreased from 40 to 35</dd>
+    
+                                <dt><img class="me-2" src="images\Dark_Troll_Summoner_Skeleton_Warrior_icon.webp" alt="">Skeleton Warrior</dt>
+                                <dd>Movement/Attack Speed slow against melee heroes rescaled from 25/25% to 20/30%</dd>
+                                <dd>Movement/Attack Speed slow against ranged heroes rescaled from 50/50% to 40/60%</dd>
+                                
+                                <h4 class="mt-5">Heroes</h4><hr>
+                                <dt><img class="me-2" src="images\Arc_Warden_icon.webp" alt="">Arc Warden</dt>
+                                <dd>Base damage increased from 47-57 to 51-57</dd>
+                                <dt><img class="me-2" src="images\Axe_icon.webp" alt="">Axe</dt>
+                                <dd>Base Health regeneration reduced from 2.75 to 2.5</dd>
+                                <dt><img class="me-2" src="images\Bane_icon.webp" alt="">Bane</dt>
+                                <dd>Fiend's Grip Max Channel time reduced from 6 to 5/5.5/6s</dd>
+                                <dt><img class="me-2" src="images\Bloodseeker_icon.webp" alt="">Bloodseeker</dt>
+                                <dd>Blood Mist self damage is now magical instead of Pure</dd>
+                                <dd>Blood Mist damage to enemies increased from 5% to 7%</dd>
+                                <dd>Blood Mist cooldown reduced from 4s to 3s</dd>
+                                <dt><img class="me-2" src="images\Broodmother_icon.webp" alt="">Broodmother</dt>
+                                <dd>Spin Web mana cost reduced from 50 to 40</dd>
+                                <dt><img class="me-2" src="images\Chaos_Knight_icon.webp" alt="">Chaos Knight</dt>
+                                <dd>Chaos Bolt shard bonus range decreased from 300 to 150</dd>
+                                <dd>Chaos Strike no longer applies Bonus damage to Creep Heroes and Roshan.</dd>
+                                <dt><img class="me-2" src="images\Chen_icon.webp" alt="">Chen</dt>
+                                <dd>Base Movement Speed increased from 300 to 305</dd>
+                                <dd>Hand of God cooldown decreased from 160/140/120 to 150/130/110</dd>
+                            </dl>
+                        </p>
+                    </div>
+                    <div class="tab-pane fade" id="list-7-31" role="tabpanel" aria-labelledby="list-7-31-list">
+                        <div class="d-flex flex-column align-items-center">
+                            <p class="fs-1 m-0">
+                                Version 7.31
+                            </p>
+                            <p class="creator-date m-0">
+                                Released on February 23rd, 2022
+                            </p>
+                        </div>
+                        <p class="text-lg-start">
+                            <dl>
+                                <h4>Neutral Creeps</h4><hr>
+                                <dt><img class="me-2" src="images\Harpy_Scout_icon.webp" alt="">Harpy Scout</dt>
+                                <dd>Take Off max mana cost per second from 2.5% to 4%</dd>
+                                <dd>Vision reduced from 1800/1800 to 1200/800</dd>
+                                
+                                <dt><img class="me-2" src="images\Dark_Troll_Summoner_icon.webp" alt="">Dark Troll Summoner</dt>
+                                <dd>Cooldown increased from 18 to 20</dd>
+                                <dd>Duration decreased from 40 to 35</dd>
+    
+                                <dt><img class="me-2" src="images\Dark_Troll_Summoner_Skeleton_Warrior_icon.webp" alt="">Skeleton Warrior</dt>
+                                <dd>Movement/Attack Speed slow against melee heroes rescaled from 25/25% to 20/30%</dd>
+                                <dd>Movement/Attack Speed slow against ranged heroes rescaled from 50/50% to 40/60%</dd>
+                                
+                                <h4 class="mt-5">Heroes</h4><hr>
+                                <dt><img class="me-2" src="images\Arc_Warden_icon.webp" alt="">Arc Warden</dt>
+                                <dd>Base damage increased from 47-57 to 51-57</dd>
+                                <dt><img class="me-2" src="images\Axe_icon.webp" alt="">Axe</dt>
+                                <dd>Base Health regeneration reduced from 2.75 to 2.5</dd>
+                                <dt><img class="me-2" src="images\Bane_icon.webp" alt="">Bane</dt>
+                                <dd>Fiend's Grip Max Channel time reduced from 6 to 5/5.5/6s</dd>
+                                <dt><img class="me-2" src="images\Bloodseeker_icon.webp" alt="">Bloodseeker</dt>
+                                <dd>Blood Mist self damage is now magical instead of Pure</dd>
+                                <dd>Blood Mist damage to enemies increased from 5% to 7%</dd>
+                                <dd>Blood Mist cooldown reduced from 4s to 3s</dd>
+                                <dt><img class="me-2" src="images\Broodmother_icon.webp" alt="">Broodmother</dt>
+                                <dd>Spin Web mana cost reduced from 50 to 40</dd>
+                                <dt><img class="me-2" src="images\Chaos_Knight_icon.webp" alt="">Chaos Knight</dt>
+                                <dd>Chaos Bolt shard bonus range decreased from 300 to 150</dd>
+                                <dd>Chaos Strike no longer applies Bonus damage to Creep Heroes and Roshan.</dd>
+                                <dt><img class="me-2" src="images\Chen_icon.webp" alt="">Chen</dt>
+                                <dd>Base Movement Speed increased from 300 to 305</dd>
+                                <dd>Hand of God cooldown decreased from 160/140/120 to 150/130/110</dd>
+                            </dl>
+                        </p>
+                    </div>
+                    <div class="tab-pane fade" id="list-7-30-e" role="tabpanel" aria-labelledby="list-7-30e-list">
+                        <div class="d-flex flex-column align-items-center">
+                            <p class="fs-1 m-0">
+                                Version 7.30e
+                            </p>
+                            <p class="creator-date m-0">
+                                Released on October 28, 2021
+                            </p>
+                        </div>
+                        <p class="text-lg-start">
+                            <dl>
+                                <h4>Neutral Creeps</h4><hr>
+                                <dt><img class="me-2" src="images\Harpy_Scout_icon.webp" alt="">Harpy Scout</dt>
+                                <dd>Take Off max mana cost per second from 2.5% to 4%</dd>
+                                <dd>Vision reduced from 1800/1800 to 1200/800</dd>
+                                
+                                <dt><img class="me-2" src="images\Dark_Troll_Summoner_icon.webp" alt="">Dark Troll Summoner</dt>
+                                <dd>Cooldown increased from 18 to 20</dd>
+                                <dd>Duration decreased from 40 to 35</dd>
+    
+                                <dt><img class="me-2" src="images\Dark_Troll_Summoner_Skeleton_Warrior_icon.webp" alt="">Skeleton Warrior</dt>
+                                <dd>Movement/Attack Speed slow against melee heroes rescaled from 25/25% to 20/30%</dd>
+                                <dd>Movement/Attack Speed slow against ranged heroes rescaled from 50/50% to 40/60%</dd>
+                                
+                                <h4 class="mt-5">Heroes</h4><hr>
+                                <dt><img class="me-2" src="images\Arc_Warden_icon.webp" alt="">Arc Warden</dt>
+                                <dd>Base damage increased from 47-57 to 51-57</dd>
+                                <dt><img class="me-2" src="images\Axe_icon.webp" alt="">Axe</dt>
+                                <dd>Base Health regeneration reduced from 2.75 to 2.5</dd>
+                                <dt><img class="me-2" src="images\Bane_icon.webp" alt="">Bane</dt>
+                                <dd>Fiend's Grip Max Channel time reduced from 6 to 5/5.5/6s</dd>
+                                <dt><img class="me-2" src="images\Bloodseeker_icon.webp" alt="">Bloodseeker</dt>
+                                <dd>Blood Mist self damage is now magical instead of Pure</dd>
+                                <dd>Blood Mist damage to enemies increased from 5% to 7%</dd>
+                                <dd>Blood Mist cooldown reduced from 4s to 3s</dd>
+                                <dt><img class="me-2" src="images\Broodmother_icon.webp" alt="">Broodmother</dt>
+                                <dd>Spin Web mana cost reduced from 50 to 40</dd>
+                                <dt><img class="me-2" src="images\Chaos_Knight_icon.webp" alt="">Chaos Knight</dt>
+                                <dd>Chaos Bolt shard bonus range decreased from 300 to 150</dd>
+                                <dd>Chaos Strike no longer applies Bonus damage to Creep Heroes and Roshan.</dd>
+                                <dt><img class="me-2" src="images\Chen_icon.webp" alt="">Chen</dt>
+                                <dd>Base Movement Speed increased from 300 to 305</dd>
+                                <dd>Hand of God cooldown decreased from 160/140/120 to 150/130/110</dd>
+                            </dl>
+                        </p>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            
+        </div>
+    </main>
+    <!-- Footer -->
+    <footer class="d-flex container-lg rounded-top bg-danger align-items-center justify-content-center">
+        <p class="m-0 p-3 text-center">Copyright © 2022 DOTAOBSERVE. All rights reserved.</p>
+    </footer>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</body>
+</html>

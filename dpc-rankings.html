@@ -1,0 +1,1469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DPC Rankings | DOTAOBSERVE</title>
+    <link rel="icon" type="image/x-icon" href="/images/Observer_Ward_model.png">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <!-- icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
+    <style>
+        body {
+            background-color: #222831;
+            color: white;
+        }
+
+        header, footer {
+            background-color: #F05454;
+        }
+
+        .separator {
+            display: flex;
+            align-items: center;
+            text-align: center;
+        }
+
+        .separator::before,
+        .separator::after {
+            content: '';
+            flex: 1;
+            border-bottom: 1px solid #DDDDDD;
+        }
+
+        .separator:not(:empty)::before {
+            margin-right: .25em;
+        }
+
+        .separator:not(:empty)::after {
+            margin-left: .25em;
+        }
+
+        .front-page {
+            background-color: #30475E;
+            margin-top: 10vh;
+        }
+
+        .creator-date {
+          font-size: 14px;
+        }
+        
+        dt {
+            margin-bottom: 0.8em;
+        }
+
+        dd {
+            display: list-item;
+            list-style-type: disc;
+            margin-left: 2em;
+        }
+
+        footer {
+            margin-top: 4vh;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar fixed-top container-lg rounded-bottom navbar-dark bg-danger navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand text-white" href="#">
+                <img src="images/Observer_Ward_model.png" width="40px" alt="">
+                DOTAOBSERVE
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="navbar-nav ms-auto">
+                  <a class="nav-link disabled fw-bold" aria-current="page" href="#news">News</a>
+                  <a class="nav-link active fw-bold" href="">DPC Rankings</a>
+                  <a class="nav-link disabled fw-bold" href="#patch-notes">Patch Notes</a>
+                  <a class="nav-link disabled fw-bold" href="#vods">VODs</a>
+                </div>
+            </div>
+          </div>
+        </div>
+    </nav>
+    <main>
+        <!-- Main page -->
+        <div class="front-page container-lg p-3 rounded-3">
+
+            <!-- News -->
+            <div class="container-lg mb-5">
+                <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                    <ol class="breadcrumb fs-4">
+                        <li class="breadcrumb-item"><button type="button" class="btn btn-danger"><a href="index.html" class="text-light text-decoration-none">Home</a></button>
+                        <li class="breadcrumb-item active" aria-current="page"><button type="button" class="btn btn-secondary" disabled><a href="index.html" class="text-light text-decoration-none">DPC Rankings</a></button>
+                    </ol>
+                </nav>
+            </div>
+            
+            <div class="row justify-content-md-center">
+                <div class="col-lg-3">
+                    <p class="text-center">Click on a team name for more details.</p>
+                    <table class="table table-hover table-dark table-striped table-bordered table-sm mb-5">
+                        <thead>
+                          <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Teams</th>
+                            <th scope="col">Points</th>
+                          </tr>
+                        </thead>
+                        <tbody id="list-tab" role="tablist">
+                          <tr class="table-success">
+                            <th scope="row">1</th>
+                            <td><a class="list-group-item list-group-item-action active" id="table-row-1" data-bs-toggle="list" href="#row-1" role="tab">PSG.LGD</a></td>
+                            <td>1400</td>
+                          </tr>
+                          <tr class="table-success">
+                            <th scope="row">2</th>
+                            <td><a class="list-group-item list-group-item-action" id="table-row-2" data-bs-toggle="list" href="#row-2" role="tab">TSM</a></td>
+                            <td>1280</td>
+                          </tr>
+                          <tr class="table-success">
+                            <th scope="row">3</th>
+                            <td><a class="list-group-item list-group-item-action" id="table-row-3" data-bs-toggle="list" href="#row-3" role="tab">OG</a></td>
+                            <td>1140</td>
+                          </tr>
+                          <tr class="table-success">
+                            <th scope="row">4</th>
+                            <td><a class="list-group-item list-group-item-action" id="table-row-4" data-bs-toggle="list" href="#row-4" role="tab">Gaimin Gladiators</a></td>
+                            <td>1130</td>
+                          </tr>
+                          <tr class="table-success">
+                            <th scope="row">5</th>
+                            <td><a class="list-group-item list-group-item-action" id="table-row-5" data-bs-toggle="list" href="#row-5" role="tab">Thunder Awaken</a></td>
+                            <td>1040</td>
+                          </tr>
+                          <tr class="table-success">
+                            <th scope="row">6</th>
+                            <td><a class="list-group-item list-group-item-action" id="table-row-6" data-bs-toggle="list" href="#row-6" role="tab">Beastcoast</a></td>
+                            <td>995</td>
+                          </tr>
+                          <tr class="table-success">
+                            <th scope="row">7</th>
+                            <td><a class="list-group-item list-group-item-action" id="table-row-7" data-bs-toggle="list" href="#row-7" role="tab">Fnatic</a></td>
+                            <td>820</td>
+                          </tr>
+                          <tr class="table-success">
+                            <th scope="row">8</th>
+                            <td><a class="list-group-item list-group-item-action" id="table-row-8" data-bs-toggle="list" href="#row-8" role="tab">Team Spirit</a></td>
+                            <td>790</td>
+                          </tr>
+                          <tr class="table-success">
+                            <th scope="row">9</th>
+                            <td><a class="list-group-item list-group-item-action" id="table-row-9" data-bs-toggle="list" href="#row-9" role="tab">Tundra Esports</a></td>
+                            <td>712</td>
+                          </tr>
+                          <tr class="table-success">
+                            <th scope="row">10</th>
+                            <td><a class="list-group-item list-group-item-action" id="table-row-10" data-bs-toggle="list" href="#row-10" role="tab">BetBoom Team</a></td>
+                            <td>640</td>
+                          </tr>
+                          <tr class="table-success">
+                            <th scope="row">11</th>
+                            <td><a class="list-group-item list-group-item-action" id="table-row-11" data-bs-toggle="list" href="#row-11" role="tab">Team Aster</a></td>
+                            <td>640</td>
+                          </tr>
+                          <tr class="table-success">
+                            <th scope="row">12</th>
+                            <td><a class="list-group-item list-group-item-action" id="table-row-12" data-bs-toggle="list" href="#row-12" role="tab">BOOM</a></td>
+                            <td>622.5</td>
+                          </tr>
+                          <tr class="table-danger">
+                            <th scope="row">13</th>
+                            <td><a class="list-group-item list-group-item-action" id="table-row-13" data-bs-toggle="list" href="#row-13" role="tab">Team Liquid</a></td>
+                            <td>590</td>
+                          </tr>
+                          <tr class="table-danger">
+                            <th scope="row">14</th>
+                            <td><a class="list-group-item list-group-item-action" id="table-row-14" data-bs-toggle="list" href="#row-14" role="tab">Evil Geniuses</a></td>
+                            <td>552.5</td>
+                          </tr>
+                          <tr class="table-danger">
+                            <th scope="row">15</th>
+                            <td><a class="list-group-item list-group-item-action" id="table-row-15" data-bs-toggle="list" href="#row-15" role="tab">T1</a></td>
+                            <td>328.3</td>
+                          </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="col-lg-8">
+                  <div class="tab-content" id="nav-tabContent">
+                    <div class="tab-pane fade show active" id="row-1" role="tabpanel" aria-labelledby="table-row-1">
+                        <div class="d-flex flex-column align-items-center justify-content-center">
+                            <p class="fs-1 text-center"><img class="pe-2" src="images\PSG.LGD_logo_2020_std.png" alt="">PSG.LGD</p>
+                            <p class="fs-2 text-center">Rank: #1</p>
+                            <p class="fs-3 text-center">Team Information</p>
+                            <div class="w-100 row">
+                                <div class="p-2 col text-end">Location:</div>
+                                <div class="p-2 col">China</div>
+                            </div>
+                            <div class="w-100 row">
+                                <div class="p-2 col text-end">Total Earnings:</div>
+                                <div class="p-2 col">US$22,168,921</div>
+                            </div>
+                            <div class="w-100 row">
+                                <div class="p-2 col text-end">Creation Date:</div>
+                                <div class="p-2 col">2009</div>
+                            </div>
+                            <div class="row mt-5">
+                                <div class="col p-2 fs-3">Player Roster</div>
+                            </div>
+                            <div class="row row-cols-1 row-cols-md-3 g-4 mb-5">
+                                <div class="col">
+                                    <div class="card">
+                                      <img src="images\300px-Ame-LGD.jpg" class="card-img-top" alt="...">
+                                      <div class="card-body text-black">
+                                          <h5 class="card-title">Ame</h5>
+                                          <p class="card-text">Carry</p>
+                                          <p>Join date: 2020-09-16</p>
+                                      </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card">
+                                      <img src="images\300px-NothingToSay.jpg" class="card-img-top" alt="...">
+                                      <div class="card-body text-black">
+                                          <h5 class="card-title">NothingToSay</h5>
+                                          <p class="card-text">Mid</p>
+                                          <p>Join date: 2020-09-16</p>
+                                      </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card">
+                                      <img src="images\300px-Faith_bian-EHOME_2018.jpg" class="card-img-top" alt="...">
+                                      <div class="card-body text-black">
+                                          <h5 class="card-title">Faith_bian</h5>
+                                          <p class="card-text">Offlane</p>
+                                          <p>Join date: 2020-09-16</p>
+                                      </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card">
+                                        <img src="images\300px-XinQ-Serenity.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body text-black">
+                                            <h5 class="card-title">XinQ</h5>
+                                            <p class="card-text">Roaming</p>
+                                            <p>Join date: 2020-09-16</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card">
+                                        <img src="images\300px-Y`-EHOME_2018.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body text-black">
+                                            <h5 class="card-title">y`</h5>
+                                            <p class="card-text">Support</p>
+                                            <p>Join date: 2020-09-16</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card">
+                                        <img src="images\300px-Xiao8-EHOME_2018.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body text-black">
+                                            <h5 class="card-title">xiao8</h5>
+                                            <p class="card-text">Coach</p>
+                                            <p>Join date: September 16, 2020</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                       
+                    <div class="tab-pane fade" id="row-2" role="tabpanel" aria-labelledby="table-row-2">
+                        <div class="d-flex flex-column align-items-center justify-content-center">
+                            <p class="fs-1 text-center"><img class="pe-2" src="images\50px-TSM_2019_lightmode.png" alt="">TSM</p>
+                            <p class="fs-2 text-center">Rank: #2</p>
+                            <p class="fs-3 text-center">Team Information</p>
+                            <div class="w-100 row">
+                                <div class="p-2 col text-end">Location:</div>
+                                <div class="p-2 col">United States</div>
+                            </div>
+                            <div class="w-100 row">
+                                <div class="p-2 col text-end">Total Earnings:</div>
+                                <div class="p-2 col">US$186,174</div>
+                            </div>
+                            <div class="w-100 row">
+                                <div class="p-2 col text-end">Creation Date:</div>
+                                <div class="p-2 col">2009</div>
+                            </div>
+                            <div class="row mt-5">
+                                <div class="col p-2 fs-3">Player Roster</div>
+                            </div>
+                            <div class="row row-cols-1 row-cols-md-3 g-4 mb-5">
+                                <div class="col">
+                                    <div class="card">
+                                      <img src="images\300px-Ame-LGD.jpg" class="card-img-top" alt="...">
+                                      <div class="card-body text-black">
+                                          <h5 class="card-title">Timado</h5>
+                                          <p class="card-text">Carry</p>
+                                          <p>Join date: 2020-09-16</p>
+                                      </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card">
+                                      <img src="images\300px-NothingToSay.jpg" class="card-img-top" alt="...">
+                                      <div class="card-body text-black">
+                                          <h5 class="card-title">Bryle</h5>
+                                          <p class="card-text">Mid</p>
+                                          <p>Join date: 2020-09-16</p>
+                                      </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card">
+                                      <img src="images\300px-Faith_bian-EHOME_2018.jpg" class="card-img-top" alt="...">
+                                      <div class="card-body text-black">
+                                          <h5 class="card-title">SabeRLight-</h5>
+                                          <p class="card-text">Offlane</p>
+                                          <p>Join date: 2020-09-16</p>
+                                      </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card">
+                                        <img src="images\300px-XinQ-Serenity.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body text-black">
+                                            <h5 class="card-title">MoonMeander</h5>
+                                            <p class="card-text">Roaming</p>
+                                            <p>Join date: 2020-09-16</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card">
+                                        <img src="images\300px-Y`-EHOME_2018.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body text-black">
+                                            <h5 class="card-title">DuBu</h5>
+                                            <p class="card-text">Support</p>
+                                            <p>Join date: 2020-09-16</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card">
+                                        <img src="images\300px-Xiao8-EHOME_2018.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body text-black">
+                                            <h5 class="card-title">xiao8</h5>
+                                            <p class="card-text">Coach</p>
+                                            <p>Join date: September 16, 2020</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="row-3" role="tabpanel" aria-labelledby="table-row-3">
+                        <div class="d-flex flex-column align-items-center justify-content-center">
+                            <p class="fs-1"><img class="pe-2" src="images\34px-OG_RB_allmode.png" alt="">OG</p>
+                            <p class="fs-2 text-center">Rank: #3</p>
+                            <p class="fs-3">Team Information</p>
+                            <div class="w-100 row">
+                                <div class="p-2 col text-end">Location:</div>
+                                <div class="p-2 col">Europe</div>
+                            </div>
+                            <div class="w-100 row">
+                                <div class="p-2 col text-end">Total Earnings:</div>
+                                <div class="p-2 col">US$35,164,685</div>
+                            </div>
+                            <div class="w-100 row">
+                                <div class="p-2 col text-end">Creation Date:</div>
+                                <div class="p-2 col">2015-10-31</div>
+                            </div>
+                            <div class="row mt-5">
+                                <div class="col p-2 fs-3">Player Roster</div>
+                            </div>
+                            <div class="row row-cols-1 row-cols-md-3 g-4 mb-5">
+                                <div class="col">
+                                    <div class="card">
+                                      <img src="images\300px-Ame-LGD.jpg" class="card-img-top" alt="...">
+                                      <div class="card-body text-black">
+                                          <h5 class="card-title">Yuragi</h5>
+                                          <p class="card-text">Carry</p>
+                                          <p>Join date: 2020-09-16</p>
+                                      </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card">
+                                      <img src="images\300px-NothingToSay.jpg" class="card-img-top" alt="...">
+                                      <div class="card-body text-black">
+                                          <h5 class="card-title">bzm</h5>
+                                          <p class="card-text">Mid</p>
+                                          <p>Join date: 2020-09-16</p>
+                                      </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card">
+                                      <img src="images\300px-Faith_bian-EHOME_2018.jpg" class="card-img-top" alt="...">
+                                      <div class="card-body text-black">
+                                          <h5 class="card-title">ATF</h5>
+                                          <p class="card-text">Offlane</p>
+                                          <p>Join date: 2020-09-16</p>
+                                      </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card">
+                                        <img src="images\300px-XinQ-Serenity.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body text-black">
+                                            <h5 class="card-title">Taiga</h5>
+                                            <p class="card-text">Roaming</p>
+                                            <p>Join date: 2020-09-16</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card">
+                                        <img src="images\300px-Y`-EHOME_2018.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body text-black">
+                                            <h5 class="card-title">Misha</h5>
+                                            <p class="card-text">Support</p>
+                                            <p>Join date: 2020-09-16</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card">
+                                        <img src="images\300px-Xiao8-EHOME_2018.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body text-black">
+                                            <h5 class="card-title">xiao8</h5>
+                                            <p class="card-text">Coach</p>
+                                            <p>Join date: September 16, 2020</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="row-4" role="tabpanel" aria-labelledby="table-row-4">
+                        <div class="d-flex flex-column align-items-center justify-content-center">
+                            <p class="fs-1"><img class="pe-2" src="images\30px-Gladiators_2022_allmode.png" alt="">Gaimin Gladiators</p>
+                            <p class="fs-2 text-center">Rank: #4</p>
+                            <p class="fs-3">Team Information</p>
+                            <div class="w-100 row">
+                                <div class="p-2 col text-end">Location:</div>
+                                <div class="p-2 col">Europe</div>
+                            </div>
+                            <div class="w-100 row">
+                                <div class="p-2 col text-end">Total Earnings:</div>
+                                <div class="p-2 col">US$135,000</div>
+                            </div>
+                            <div class="w-100 row">
+                                <div class="p-2 col text-end">Creation Date:</div>
+                                <div class="p-2 col">2022-02-08</div>
+                            </div>
+                            <div class="row mt-5">
+                                <div class="col p-2 fs-3">Player Roster</div>
+                            </div>
+                            <div class="row row-cols-1 row-cols-md-3 g-4 mb-5">
+                                <div class="col">
+                                    <div class="card">
+                                      <img src="images\300px-Ame-LGD.jpg" class="card-img-top" alt="...">
+                                      <div class="card-body text-black">
+                                          <h5 class="card-title">DyrachYO</h5>
+                                          <p class="card-text">Carry</p>
+                                          <p>Join date: 2020-09-16</p>
+                                      </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card">
+                                      <img src="images\300px-NothingToSay.jpg" class="card-img-top" alt="...">
+                                      <div class="card-body text-black">
+                                          <h5 class="card-title">BOOM</h5>
+                                          <p class="card-text">Mid</p>
+                                          <p>Join date: 2020-09-16</p>
+                                      </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card">
+                                      <img src="images\300px-Faith_bian-EHOME_2018.jpg" class="card-img-top" alt="...">
+                                      <div class="card-body text-black">
+                                          <h5 class="card-title">Ace</h5>
+                                          <p class="card-text">Offlane</p>
+                                          <p>Join date: 2020-09-16</p>
+                                      </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card">
+                                        <img src="images\300px-XinQ-Serenity.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body text-black">
+                                            <h5 class="card-title">tOfu</h5>
+                                            <p class="card-text">Roaming</p>
+                                            <p>Join date: 2020-09-16</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card">
+                                        <img src="images\300px-Y`-EHOME_2018.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body text-black">
+                                            <h5 class="card-title">Seleri</h5>
+                                            <p class="card-text">Support</p>
+                                            <p>Join date: 2020-09-16</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card">
+                                        <img src="images\300px-Xiao8-EHOME_2018.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body text-black">
+                                            <h5 class="card-title">xiao8</h5>
+                                            <p class="card-text">Coach</p>
+                                            <p>Join date: September 16, 2020</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="row-5" role="tabpanel" aria-labelledby="table-row-5">
+                        <div class="d-flex flex-column align-items-center justify-content-center">
+                            <p class="fs-1"><img class="pe-2" src="images\50px-Thunder_Awaken_2022_lightmode.png" alt="">Thunder Awaken</p>
+                            <p class="fs-2 text-center">Rank: #5</p>
+                            <p class="fs-3">Team Information</p>
+                            <div class="w-100 row">
+                                <div class="p-2 col text-end">Location:</div>
+                                <div class="p-2 col">Peru</div>
+                            </div>
+                            <div class="w-100 row">
+                                <div class="p-2 col text-end">Total Earnings:</div>
+                                <div class="p-2 col">US$506,946</div>
+                            </div>
+                            <div class="w-100 row">
+                                <div class="p-2 col text-end">Creation Date:</div>
+                                <div class="p-2 col">2016-04-19</div>
+                            </div>
+                            <div class="row mt-5">
+                                <div class="col p-2 fs-3">Player Roster</div>
+                            </div>
+                            <div class="row row-cols-1 row-cols-md-3 g-4 mb-5">
+                                <div class="col">
+                                    <div class="card">
+                                      <img src="images\300px-Ame-LGD.jpg" class="card-img-top" alt="...">
+                                      <div class="card-body text-black">
+                                          <h5 class="card-title">Pakasz</h5>
+                                          <p class="card-text">Carry</p>
+                                          <p>Join date: 2020-09-16</p>
+                                      </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card">
+                                      <img src="images\300px-NothingToSay.jpg" class="card-img-top" alt="...">
+                                      <div class="card-body text-black">
+                                          <h5 class="card-title">Darkmago</h5>
+                                          <p class="card-text">Mid</p>
+                                          <p>Join date: 2020-09-16</p>
+                                      </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card">
+                                      <img src="images\300px-Faith_bian-EHOME_2018.jpg" class="card-img-top" alt="...">
+                                      <div class="card-body text-black">
+                                          <h5 class="card-title">Sacred</h5>
+                                          <p class="card-text">Offlane</p>
+                                          <p>Join date: 2020-09-16</p>
+                                      </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card">
+                                        <img src="images\300px-XinQ-Serenity.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body text-black">
+                                            <h5 class="card-title">Matthew</h5>
+                                            <p class="card-text">Roaming</p>
+                                            <p>Join date: 2020-09-16</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card">
+                                        <img src="images\300px-Y`-EHOME_2018.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body text-black">
+                                            <h5 class="card-title">Pandaboo</h5>
+                                            <p class="card-text">Support</p>
+                                            <p>Join date: 2020-09-16</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card">
+                                        <img src="images\300px-Xiao8-EHOME_2018.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body text-black">
+                                            <h5 class="card-title">xiao8</h5>
+                                            <p class="card-text">Coach</p>
+                                            <p>Join date: September 16, 2020</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="row-6" role="tabpanel" aria-labelledby="table-row-6">
+                        <div class="d-flex flex-column align-items-center justify-content-center">
+                            <p class="fs-1"><img class="pe-2" src="images\50px-Beastcoast_2022_allmode.png" alt="">Beastcoast</p>
+                            <p class="fs-2 text-center">Rank: #6</p>
+                            <p class="fs-3">Team Information</p>
+                            <div class="w-100 row">
+                                <div class="p-2 col text-end">Location:</div>
+                                <div class="p-2 col">Peru</div>
+                            </div>
+                            <div class="w-100 row">
+                                <div class="p-2 col text-end">Total Earnings:</div>
+                                <div class="p-2 col">US$985,450</div>
+                            </div>
+                            <div class="w-100 row">
+                                <div class="p-2 col text-end">Creation Date:</div>
+                                <div class="p-2 col">2019-05-01</div>
+                            </div>
+                            <div class="row mt-5">
+                                <div class="col p-2 fs-3">Player Roster</div>
+                            </div>
+                            <div class="row row-cols-1 row-cols-md-3 g-4 mb-5">
+                                <div class="col">
+                                    <div class="card">
+                                      <img src="images\300px-Ame-LGD.jpg" class="card-img-top" alt="...">
+                                      <div class="card-body text-black">
+                                          <h5 class="card-title">K1</h5>
+                                          <p class="card-text">Carry</p>
+                                          <p>Join date: 2020-09-16</p>
+                                      </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card">
+                                      <img src="images\300px-NothingToSay.jpg" class="card-img-top" alt="...">
+                                      <div class="card-body text-black">
+                                          <h5 class="card-title">Chris Luck	</h5>
+                                          <p class="card-text">Mid</p>
+                                          <p>Join date: 2020-09-16</p>
+                                      </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card">
+                                      <img src="images\300px-Faith_bian-EHOME_2018.jpg" class="card-img-top" alt="...">
+                                      <div class="card-body text-black">
+                                          <h5 class="card-title">Wisper</h5>
+                                          <p class="card-text">Offlane</p>
+                                          <p>Join date: 2020-09-16</p>
+                                      </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card">
+                                        <img src="images\300px-XinQ-Serenity.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body text-black">
+                                            <h5 class="card-title">Scofield</h5>
+                                            <p class="card-text">Roaming</p>
+                                            <p>Join date: 2020-09-16</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card">
+                                        <img src="images\300px-Y`-EHOME_2018.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body text-black">
+                                            <h5 class="card-title">Stinger</h5>
+                                            <p class="card-text">Support</p>
+                                            <p>Join date: 2020-09-16</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card">
+                                        <img src="images\300px-Xiao8-EHOME_2018.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body text-black">
+                                            <h5 class="card-title">xiao8</h5>
+                                            <p class="card-text">Coach</p>
+                                            <p>Join date: September 16, 2020</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="row-7" role="tabpanel" aria-labelledby="table-row-7">
+                        <div class="d-flex flex-column align-items-center justify-content-center">
+                            <p class="fs-1 text-center"><img class="pe-2" src="images\77px-Fnatic_2020_allmode.png" alt="">Fnatic</p>
+                            <p class="fs-2 text-center">Rank: #7</p>
+                            <p class="fs-3 text-center">Team Information</p>
+                            <div class="w-100 row">
+                                <div class="p-2 col text-end">Location:</div>
+                                <div class="p-2 col">United Kingdom</div>
+                            </div>
+                            <div class="w-100 row">
+                                <div class="p-2 col text-end">Total Earnings:</div>
+                                <div class="p-2 col">US$5,093,612</div>
+                            </div>
+                            <div class="w-100 row">
+                                <div class="p-2 col text-end">Creation Date:</div>
+                                <div class="p-2 col">2011-11-07</div>
+                            </div>
+                            <div class="row mt-5">
+                                <div class="col p-2 fs-3">Player Roster</div>
+                            </div>
+                            <div class="row row-cols-1 row-cols-md-3 g-4 mb-5">
+                                <div class="col">
+                                    <div class="card">
+                                      <img src="images\300px-Ame-LGD.jpg" class="card-img-top" alt="...">
+                                      <div class="card-body text-black">
+                                          <h5 class="card-title">Raven</h5>
+                                          <p class="card-text">Carry</p>
+                                          <p>Join date: 2020-09-16</p>
+                                      </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card">
+                                      <img src="images\300px-NothingToSay.jpg" class="card-img-top" alt="...">
+                                      <div class="card-body text-black">
+                                          <h5 class="card-title">Armel</h5>
+                                          <p class="card-text">Mid</p>
+                                          <p>Join date: 2020-09-16</p>
+                                      </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card">
+                                      <img src="images\300px-Faith_bian-EHOME_2018.jpg" class="card-img-top" alt="...">
+                                      <div class="card-body text-black">
+                                          <h5 class="card-title">Jabz</h5>
+                                          <p class="card-text">Offlane</p>
+                                          <p>Join date: 2020-09-16</p>
+                                      </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card">
+                                        <img src="images\300px-XinQ-Serenity.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body text-black">
+                                            <h5 class="card-title">DJ</h5>
+                                            <p class="card-text">Roaming</p>
+                                            <p>Join date: 2020-09-16</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card">
+                                        <img src="images\300px-Y`-EHOME_2018.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body text-black">
+                                            <h5 class="card-title">Jaunuel</h5>
+                                            <p class="card-text">Support</p>
+                                            <p>Join date: 2020-09-16</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card">
+                                        <img src="images\300px-Xiao8-EHOME_2018.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body text-black">
+                                            <h5 class="card-title">xiao8</h5>
+                                            <p class="card-text">Coach</p>
+                                            <p>Join date: September 16, 2020</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                       
+                    <div class="tab-pane fade" id="row-8" role="tabpanel" aria-labelledby="table-row-8">
+                        <div class="d-flex flex-column align-items-center justify-content-center">
+                            <p class="fs-1 text-center"><img class="pe-2" src="images\43px-Team_Spirit_2022_lightmode.png" alt="">Team Spirit</p>
+                            <p class="fs-2 text-center">Rank: #8</p>
+                            <p class="fs-3 text-center">Team Information</p>
+                            <div class="w-100 row">
+                                <div class="p-2 col text-end">Location:</div>
+                                <div class="p-2 col">Serbia</div>
+                            </div>
+                            <div class="w-100 row">
+                                <div class="p-2 col text-end">Total Earnings:</div>
+                                <div class="p-2 col">US$18,953,679</div>
+                            </div>
+                            <div class="w-100 row">
+                                <div class="p-2 col text-end">Creation Date:</div>
+                                <div class="p-2 col">2015-12-06</div>
+                            </div>
+                            <div class="row mt-5">
+                                <div class="col p-2 fs-3">Player Roster</div>
+                            </div>
+                            <div class="row row-cols-1 row-cols-md-3 g-4 mb-5">
+                                <div class="col">
+                                    <div class="card">
+                                      <img src="images\300px-Ame-LGD.jpg" class="card-img-top" alt="...">
+                                      <div class="card-body text-black">
+                                          <h5 class="card-title">Yatoro</h5>
+                                          <p class="card-text">Carry</p>
+                                          <p>Join date: 2020-09-16</p>
+                                      </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card">
+                                      <img src="images\300px-NothingToSay.jpg" class="card-img-top" alt="...">
+                                      <div class="card-body text-black">
+                                          <h5 class="card-title">TORONTOTOKYO</h5>
+                                          <p class="card-text">Mid</p>
+                                          <p>Join date: 2020-09-16</p>
+                                      </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card">
+                                      <img src="images\300px-Faith_bian-EHOME_2018.jpg" class="card-img-top" alt="...">
+                                      <div class="card-body text-black">
+                                          <h5 class="card-title">Collapse</h5>
+                                          <p class="card-text">Offlane</p>
+                                          <p>Join date: 2020-09-16</p>
+                                      </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card">
+                                        <img src="images\300px-XinQ-Serenity.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body text-black">
+                                            <h5 class="card-title">Mira</h5>
+                                            <p class="card-text">Roaming</p>
+                                            <p>Join date: 2020-09-16</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card">
+                                        <img src="images\300px-Y`-EHOME_2018.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body text-black">
+                                            <h5 class="card-title">Miposhka</h5>
+                                            <p class="card-text">Support</p>
+                                            <p>Join date: 2020-09-16</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card">
+                                        <img src="images\300px-Xiao8-EHOME_2018.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body text-black">
+                                            <h5 class="card-title">xiao8</h5>
+                                            <p class="card-text">Coach</p>
+                                            <p>Join date: September 16, 2020</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="row-9" role="tabpanel" aria-labelledby="table-row-9">
+                        <div class="d-flex flex-column align-items-center justify-content-center">
+                            <p class="fs-1"><img class="pe-2" src="images\57px-Tundra_Esports_2020_allmode.png" alt="">Tundra Esports</p>
+                            <p class="fs-2 text-center">Rank: #9</p>
+                            <p class="fs-3">Team Information</p>
+                            <div class="w-100 row">
+                                <div class="p-2 col text-end">Location:</div>
+                                <div class="p-2 col">Europe</div>
+                            </div>
+                            <div class="w-100 row">
+                                <div class="p-2 col text-end">Total Earnings:</div>
+                                <div class="p-2 col">US$35,164,685</div>
+                            </div>
+                            <div class="w-100 row">
+                                <div class="p-2 col text-end">Creation Date:</div>
+                                <div class="p-2 col">2015-10-31</div>
+                            </div>
+                            <div class="row mt-5">
+                                <div class="col p-2 fs-3">Player Roster</div>
+                            </div>
+                            <div class="row row-cols-1 row-cols-md-3 g-4 mb-5">
+                                <div class="col">
+                                    <div class="card">
+                                      <img src="images\300px-Ame-LGD.jpg" class="card-img-top" alt="...">
+                                      <div class="card-body text-black">
+                                          <h5 class="card-title">Yuragi</h5>
+                                          <p class="card-text">Carry</p>
+                                          <p>Join date: 2020-09-16</p>
+                                      </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card">
+                                      <img src="images\300px-NothingToSay.jpg" class="card-img-top" alt="...">
+                                      <div class="card-body text-black">
+                                          <h5 class="card-title">bzm</h5>
+                                          <p class="card-text">Mid</p>
+                                          <p>Join date: 2020-09-16</p>
+                                      </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card">
+                                      <img src="images\300px-Faith_bian-EHOME_2018.jpg" class="card-img-top" alt="...">
+                                      <div class="card-body text-black">
+                                          <h5 class="card-title">ATF</h5>
+                                          <p class="card-text">Offlane</p>
+                                          <p>Join date: 2020-09-16</p>
+                                      </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card">
+                                        <img src="images\300px-XinQ-Serenity.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body text-black">
+                                            <h5 class="card-title">Taiga</h5>
+                                            <p class="card-text">Roaming</p>
+                                            <p>Join date: 2020-09-16</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card">
+                                        <img src="images\300px-Y`-EHOME_2018.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body text-black">
+                                            <h5 class="card-title">Misha</h5>
+                                            <p class="card-text">Support</p>
+                                            <p>Join date: 2020-09-16</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card">
+                                        <img src="images\300px-Xiao8-EHOME_2018.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body text-black">
+                                            <h5 class="card-title">xiao8</h5>
+                                            <p class="card-text">Coach</p>
+                                            <p>Join date: September 16, 2020</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="row-10" role="tabpanel" aria-labelledby="table-row-10">
+                        <div class="d-flex flex-column align-items-center justify-content-center">
+                            <p class="fs-1"><img class="pe-2" src="images\30px-Gladiators_2022_allmode.png" alt="">Gaimin Gladiators</p>
+                            <p class="fs-2 text-center">Rank: #4</p>
+                            <p class="fs-3">Team Information</p>
+                            <div class="w-100 row">
+                                <div class="p-2 col text-end">Location:</div>
+                                <div class="p-2 col">Europe</div>
+                            </div>
+                            <div class="w-100 row">
+                                <div class="p-2 col text-end">Total Earnings:</div>
+                                <div class="p-2 col">US$135,000</div>
+                            </div>
+                            <div class="w-100 row">
+                                <div class="p-2 col text-end">Creation Date:</div>
+                                <div class="p-2 col">2022-02-08</div>
+                            </div>
+                            <div class="row mt-5">
+                                <div class="col p-2 fs-3">Player Roster</div>
+                            </div>
+                            <div class="row row-cols-1 row-cols-md-3 g-4 mb-5">
+                                <div class="col">
+                                    <div class="card">
+                                      <img src="images\300px-Ame-LGD.jpg" class="card-img-top" alt="...">
+                                      <div class="card-body text-black">
+                                          <h5 class="card-title">DyrachYO</h5>
+                                          <p class="card-text">Carry</p>
+                                          <p>Join date: 2020-09-16</p>
+                                      </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card">
+                                      <img src="images\300px-NothingToSay.jpg" class="card-img-top" alt="...">
+                                      <div class="card-body text-black">
+                                          <h5 class="card-title">BOOM</h5>
+                                          <p class="card-text">Mid</p>
+                                          <p>Join date: 2020-09-16</p>
+                                      </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card">
+                                      <img src="images\300px-Faith_bian-EHOME_2018.jpg" class="card-img-top" alt="...">
+                                      <div class="card-body text-black">
+                                          <h5 class="card-title">Ace</h5>
+                                          <p class="card-text">Offlane</p>
+                                          <p>Join date: 2020-09-16</p>
+                                      </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card">
+                                        <img src="images\300px-XinQ-Serenity.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body text-black">
+                                            <h5 class="card-title">tOfu</h5>
+                                            <p class="card-text">Roaming</p>
+                                            <p>Join date: 2020-09-16</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card">
+                                        <img src="images\300px-Y`-EHOME_2018.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body text-black">
+                                            <h5 class="card-title">Seleri</h5>
+                                            <p class="card-text">Support</p>
+                                            <p>Join date: 2020-09-16</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card">
+                                        <img src="images\300px-Xiao8-EHOME_2018.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body text-black">
+                                            <h5 class="card-title">xiao8</h5>
+                                            <p class="card-text">Coach</p>
+                                            <p>Join date: September 16, 2020</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="row-11" role="tabpanel" aria-labelledby="table-row-11">
+                        <div class="d-flex flex-column align-items-center justify-content-center">
+                            <p class="fs-1"><img class="pe-2" src="images\50px-Thunder_Awaken_2022_lightmode.png" alt="">Thunder Awaken</p>
+                            <p class="fs-2 text-center">Rank: #5</p>
+                            <p class="fs-3">Team Information</p>
+                            <div class="w-100 row">
+                                <div class="p-2 col text-end">Location:</div>
+                                <div class="p-2 col">Peru</div>
+                            </div>
+                            <div class="w-100 row">
+                                <div class="p-2 col text-end">Total Earnings:</div>
+                                <div class="p-2 col">US$506,946</div>
+                            </div>
+                            <div class="w-100 row">
+                                <div class="p-2 col text-end">Creation Date:</div>
+                                <div class="p-2 col">2016-04-19</div>
+                            </div>
+                            <div class="row mt-5">
+                                <div class="col p-2 fs-3">Player Roster</div>
+                            </div>
+                            <div class="row row-cols-1 row-cols-md-3 g-4 mb-5">
+                                <div class="col">
+                                    <div class="card">
+                                      <img src="images\300px-Ame-LGD.jpg" class="card-img-top" alt="...">
+                                      <div class="card-body text-black">
+                                          <h5 class="card-title">Pakasz</h5>
+                                          <p class="card-text">Carry</p>
+                                          <p>Join date: 2020-09-16</p>
+                                      </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card">
+                                      <img src="images\300px-NothingToSay.jpg" class="card-img-top" alt="...">
+                                      <div class="card-body text-black">
+                                          <h5 class="card-title">Darkmago</h5>
+                                          <p class="card-text">Mid</p>
+                                          <p>Join date: 2020-09-16</p>
+                                      </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card">
+                                      <img src="images\300px-Faith_bian-EHOME_2018.jpg" class="card-img-top" alt="...">
+                                      <div class="card-body text-black">
+                                          <h5 class="card-title">Sacred</h5>
+                                          <p class="card-text">Offlane</p>
+                                          <p>Join date: 2020-09-16</p>
+                                      </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card">
+                                        <img src="images\300px-XinQ-Serenity.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body text-black">
+                                            <h5 class="card-title">Matthew</h5>
+                                            <p class="card-text">Roaming</p>
+                                            <p>Join date: 2020-09-16</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card">
+                                        <img src="images\300px-Y`-EHOME_2018.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body text-black">
+                                            <h5 class="card-title">Pandaboo</h5>
+                                            <p class="card-text">Support</p>
+                                            <p>Join date: 2020-09-16</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card">
+                                        <img src="images\300px-Xiao8-EHOME_2018.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body text-black">
+                                            <h5 class="card-title">xiao8</h5>
+                                            <p class="card-text">Coach</p>
+                                            <p>Join date: September 16, 2020</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="row-12" role="tabpanel" aria-labelledby="table-row-12">
+                        <div class="d-flex flex-column align-items-center justify-content-center">
+                            <p class="fs-1"><img class="pe-2" src="images\50px-Beastcoast_2022_allmode.png" alt="">Beastcoast</p>
+                            <p class="fs-2 text-center">Rank: #6</p>
+                            <p class="fs-3">Team Information</p>
+                            <div class="w-100 row">
+                                <div class="p-2 col text-end">Location:</div>
+                                <div class="p-2 col">Peru</div>
+                            </div>
+                            <div class="w-100 row">
+                                <div class="p-2 col text-end">Total Earnings:</div>
+                                <div class="p-2 col">US$985,450</div>
+                            </div>
+                            <div class="w-100 row">
+                                <div class="p-2 col text-end">Creation Date:</div>
+                                <div class="p-2 col">2019-05-01</div>
+                            </div>
+                            <div class="row mt-5">
+                                <div class="col p-2 fs-3">Player Roster</div>
+                            </div>
+                            <div class="row row-cols-1 row-cols-md-3 g-4 mb-5">
+                                <div class="col">
+                                    <div class="card">
+                                      <img src="images\300px-Ame-LGD.jpg" class="card-img-top" alt="...">
+                                      <div class="card-body text-black">
+                                          <h5 class="card-title">K1</h5>
+                                          <p class="card-text">Carry</p>
+                                          <p>Join date: 2020-09-16</p>
+                                      </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card">
+                                      <img src="images\300px-NothingToSay.jpg" class="card-img-top" alt="...">
+                                      <div class="card-body text-black">
+                                          <h5 class="card-title">Chris Luck	</h5>
+                                          <p class="card-text">Mid</p>
+                                          <p>Join date: 2020-09-16</p>
+                                      </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card">
+                                      <img src="images\300px-Faith_bian-EHOME_2018.jpg" class="card-img-top" alt="...">
+                                      <div class="card-body text-black">
+                                          <h5 class="card-title">Wisper</h5>
+                                          <p class="card-text">Offlane</p>
+                                          <p>Join date: 2020-09-16</p>
+                                      </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card">
+                                        <img src="images\300px-XinQ-Serenity.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body text-black">
+                                            <h5 class="card-title">Scofield</h5>
+                                            <p class="card-text">Roaming</p>
+                                            <p>Join date: 2020-09-16</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card">
+                                        <img src="images\300px-Y`-EHOME_2018.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body text-black">
+                                            <h5 class="card-title">Stinger</h5>
+                                            <p class="card-text">Support</p>
+                                            <p>Join date: 2020-09-16</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card">
+                                        <img src="images\300px-Xiao8-EHOME_2018.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body text-black">
+                                            <h5 class="card-title">xiao8</h5>
+                                            <p class="card-text">Coach</p>
+                                            <p>Join date: September 16, 2020</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="row-13" role="tabpanel" aria-labelledby="table-row-13">
+                        <div class="d-flex flex-column align-items-center justify-content-center">
+                            <p class="fs-1"><img class="pe-2" src="images\30px-Gladiators_2022_allmode.png" alt="">Gaimin Gladiators</p>
+                            <p class="fs-2 text-center">Rank: #4</p>
+                            <p class="fs-3">Team Information</p>
+                            <div class="w-100 row">
+                                <div class="p-2 col text-end">Location:</div>
+                                <div class="p-2 col">Europe</div>
+                            </div>
+                            <div class="w-100 row">
+                                <div class="p-2 col text-end">Total Earnings:</div>
+                                <div class="p-2 col">US$135,000</div>
+                            </div>
+                            <div class="w-100 row">
+                                <div class="p-2 col text-end">Creation Date:</div>
+                                <div class="p-2 col">2022-02-08</div>
+                            </div>
+                            <div class="row mt-5">
+                                <div class="col p-2 fs-3">Player Roster</div>
+                            </div>
+                            <div class="row row-cols-1 row-cols-md-3 g-4 mb-5">
+                                <div class="col">
+                                    <div class="card">
+                                      <img src="images\300px-Ame-LGD.jpg" class="card-img-top" alt="...">
+                                      <div class="card-body text-black">
+                                          <h5 class="card-title">DyrachYO</h5>
+                                          <p class="card-text">Carry</p>
+                                          <p>Join date: 2020-09-16</p>
+                                      </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card">
+                                      <img src="images\300px-NothingToSay.jpg" class="card-img-top" alt="...">
+                                      <div class="card-body text-black">
+                                          <h5 class="card-title">BOOM</h5>
+                                          <p class="card-text">Mid</p>
+                                          <p>Join date: 2020-09-16</p>
+                                      </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card">
+                                      <img src="images\300px-Faith_bian-EHOME_2018.jpg" class="card-img-top" alt="...">
+                                      <div class="card-body text-black">
+                                          <h5 class="card-title">Ace</h5>
+                                          <p class="card-text">Offlane</p>
+                                          <p>Join date: 2020-09-16</p>
+                                      </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card">
+                                        <img src="images\300px-XinQ-Serenity.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body text-black">
+                                            <h5 class="card-title">tOfu</h5>
+                                            <p class="card-text">Roaming</p>
+                                            <p>Join date: 2020-09-16</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card">
+                                        <img src="images\300px-Y`-EHOME_2018.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body text-black">
+                                            <h5 class="card-title">Seleri</h5>
+                                            <p class="card-text">Support</p>
+                                            <p>Join date: 2020-09-16</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card">
+                                        <img src="images\300px-Xiao8-EHOME_2018.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body text-black">
+                                            <h5 class="card-title">xiao8</h5>
+                                            <p class="card-text">Coach</p>
+                                            <p>Join date: September 16, 2020</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="row-14" role="tabpanel" aria-labelledby="table-row-14">
+                        <div class="d-flex flex-column align-items-center justify-content-center">
+                            <p class="fs-1"><img class="pe-2" src="images\50px-Thunder_Awaken_2022_lightmode.png" alt="">Thunder Awaken</p>
+                            <p class="fs-2 text-center">Rank: #5</p>
+                            <p class="fs-3">Team Information</p>
+                            <div class="w-100 row">
+                                <div class="p-2 col text-end">Location:</div>
+                                <div class="p-2 col">Peru</div>
+                            </div>
+                            <div class="w-100 row">
+                                <div class="p-2 col text-end">Total Earnings:</div>
+                                <div class="p-2 col">US$506,946</div>
+                            </div>
+                            <div class="w-100 row">
+                                <div class="p-2 col text-end">Creation Date:</div>
+                                <div class="p-2 col">2016-04-19</div>
+                            </div>
+                            <div class="row mt-5">
+                                <div class="col p-2 fs-3">Player Roster</div>
+                            </div>
+                            <div class="row row-cols-1 row-cols-md-3 g-4 mb-5">
+                                <div class="col">
+                                    <div class="card">
+                                      <img src="images\300px-Ame-LGD.jpg" class="card-img-top" alt="...">
+                                      <div class="card-body text-black">
+                                          <h5 class="card-title">Pakasz</h5>
+                                          <p class="card-text">Carry</p>
+                                          <p>Join date: 2020-09-16</p>
+                                      </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card">
+                                      <img src="images\300px-NothingToSay.jpg" class="card-img-top" alt="...">
+                                      <div class="card-body text-black">
+                                          <h5 class="card-title">Darkmago</h5>
+                                          <p class="card-text">Mid</p>
+                                          <p>Join date: 2020-09-16</p>
+                                      </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card">
+                                      <img src="images\300px-Faith_bian-EHOME_2018.jpg" class="card-img-top" alt="...">
+                                      <div class="card-body text-black">
+                                          <h5 class="card-title">Sacred</h5>
+                                          <p class="card-text">Offlane</p>
+                                          <p>Join date: 2020-09-16</p>
+                                      </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card">
+                                        <img src="images\300px-XinQ-Serenity.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body text-black">
+                                            <h5 class="card-title">Matthew</h5>
+                                            <p class="card-text">Roaming</p>
+                                            <p>Join date: 2020-09-16</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card">
+                                        <img src="images\300px-Y`-EHOME_2018.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body text-black">
+                                            <h5 class="card-title">Pandaboo</h5>
+                                            <p class="card-text">Support</p>
+                                            <p>Join date: 2020-09-16</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card">
+                                        <img src="images\300px-Xiao8-EHOME_2018.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body text-black">
+                                            <h5 class="card-title">xiao8</h5>
+                                            <p class="card-text">Coach</p>
+                                            <p>Join date: September 16, 2020</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="row-15" role="tabpanel" aria-labelledby="table-row-15">
+                        <div class="d-flex flex-column align-items-center justify-content-center">
+                            <p class="fs-1"><img class="pe-2" src="images\50px-Beastcoast_2022_allmode.png" alt="">Beastcoast</p>
+                            <p class="fs-2 text-center">Rank: #6</p>
+                            <p class="fs-3">Team Information</p>
+                            <div class="w-100 row">
+                                <div class="p-2 col text-end">Location:</div>
+                                <div class="p-2 col">Peru</div>
+                            </div>
+                            <div class="w-100 row">
+                                <div class="p-2 col text-end">Total Earnings:</div>
+                                <div class="p-2 col">US$985,450</div>
+                            </div>
+                            <div class="w-100 row">
+                                <div class="p-2 col text-end">Creation Date:</div>
+                                <div class="p-2 col">2019-05-01</div>
+                            </div>
+                            <div class="row mt-5">
+                                <div class="col p-2 fs-3">Player Roster</div>
+                            </div>
+                            <div class="row row-cols-1 row-cols-md-3 g-4 mb-5">
+                                <div class="col">
+                                    <div class="card">
+                                      <img src="images\300px-Ame-LGD.jpg" class="card-img-top" alt="...">
+                                      <div class="card-body text-black">
+                                          <h5 class="card-title">K1</h5>
+                                          <p class="card-text">Carry</p>
+                                          <p>Join date: 2020-09-16</p>
+                                      </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card">
+                                      <img src="images\300px-NothingToSay.jpg" class="card-img-top" alt="...">
+                                      <div class="card-body text-black">
+                                          <h5 class="card-title">Chris Luck	</h5>
+                                          <p class="card-text">Mid</p>
+                                          <p>Join date: 2020-09-16</p>
+                                      </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card">
+                                      <img src="images\300px-Faith_bian-EHOME_2018.jpg" class="card-img-top" alt="...">
+                                      <div class="card-body text-black">
+                                          <h5 class="card-title">Wisper</h5>
+                                          <p class="card-text">Offlane</p>
+                                          <p>Join date: 2020-09-16</p>
+                                      </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card">
+                                        <img src="images\300px-XinQ-Serenity.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body text-black">
+                                            <h5 class="card-title">Scofield</h5>
+                                            <p class="card-text">Roaming</p>
+                                            <p>Join date: 2020-09-16</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card">
+                                        <img src="images\300px-Y`-EHOME_2018.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body text-black">
+                                            <h5 class="card-title">Stinger</h5>
+                                            <p class="card-text">Support</p>
+                                            <p>Join date: 2020-09-16</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card">
+                                        <img src="images\300px-Xiao8-EHOME_2018.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body text-black">
+                                            <h5 class="card-title">xiao8</h5>
+                                            <p class="card-text">Coach</p>
+                                            <p>Join date: September 16, 2020</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+    <!-- Footer -->
+    <footer class="d-flex container-lg rounded-top bg-danger align-items-center justify-content-center">
+        <p class="m-0 p-3 text-center">Copyright © 2022 DOTAOBSERVE. All rights reserved.</p>
+    </footer>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</body>
+</html>

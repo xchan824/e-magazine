@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News | DOTAOBSERVE</title>
+    <link rel="icon" type="image/x-icon" href="/images/Observer_Ward_model.png">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <!-- icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
+    <style>
+        body {
+            background-color: #222831;
+            color: white;
+        }
+
+        header, footer {
+            background-color: #F05454;
+        }
+
+        .separator {
+            display: flex;
+            align-items: center;
+            text-align: center;
+        }
+
+        .separator::before,
+        .separator::after {
+            content: '';
+            flex: 1;
+            border-bottom: 1px solid #DDDDDD;
+        }
+
+        .separator:not(:empty)::before {
+            margin-right: .25em;
+        }
+
+        .separator:not(:empty)::after {
+            margin-left: .25em;
+        }
+
+        .front-page {
+            background-color: #30475E;
+            margin-top: 10vh;
+        }
+
+        .creator-date {
+          font-size: 14px;
+        }
+        
+        dt {
+            margin-bottom: 0.8em;
+        }
+
+        dd {
+            display: list-item;
+            list-style-type: disc;
+            margin-left: 2em;
+        }
+
+        footer {
+            margin-top: 4vh;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar fixed-top container-lg rounded-bottom navbar-dark bg-danger navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand text-white" href="#">
+                <img src="images/Observer_Ward_model.png" width="40px" alt="">
+                DOTAOBSERVE
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="navbar-nav ms-auto">
+                  <a class="nav-link active fw-bold" aria-current="page" href="news-5.html">News</a>
+                  <a class="nav-link disabled fw-bold" href="">DPC Rankings</a>
+                  <a class="nav-link disabled fw-bold" href="">Patch Notes</a>
+                  <a class="nav-link disabled fw-bold" href="">VODs</a>
+                </div>
+            </div>
+          </div>
+        </div>
+    </nav>
+    <main>
+        <!-- Main page -->
+        <div class="front-page container-lg p-3 rounded-3">
+
+            <!-- News -->
+
+            <div class="container-lg mb-5">
+                <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                    <ol class="breadcrumb fs-4">
+                        <li class="breadcrumb-item"><button type="button" class="btn btn-danger"><a href="index.html" class="text-light text-decoration-none">Home</a></button>
+                        <li class="breadcrumb-item active" aria-current="page"><button type="button" class="btn btn-secondary" disabled><a href="index.html" class="text-light text-decoration-none">News</a></button>
+                    </ol>
+                </nav>
+
+                <nav class="mt-5" aria-label="Page navigation">
+                    <ul class="pagination justify-content-center">
+                      <li class="page-item">
+                        <a class="page-link" href="news-4.html" aria-label="Previous">
+                          <span aria-hidden="true">&laquo;</span>
+                        </a>
+                      </li>
+                      <li class="page-item"><a class="page-link" href="news-1.html">1</a></li>
+                      <li class="page-item"><a class="page-link" href="news-2.html">2</a></li>
+                      <li class="page-item"><a class="page-link" href="news-3.html">3</a></li>
+                      <li class="page-item"><a class="page-link" href="news-4.html">4</a></li>
+                      <li class="page-item disabled"><a class="page-link" href="#">5</a></li>
+                      <li class="page-item">
+                        <a class="page-link disabled" href="#" aria-label="Next">
+                          <span aria-hidden="true">&raquo;</span>
+                        </a>
+                      </li>
+                    </ul>
+                </nav>
+                
+                <div class="d-flex flex-column align-items-center">
+                    <p class="fs-1 text-center">
+                        OG blow away the competition at ESL One Stockholm Major to claim the trophy
+                    </p>
+                    <p class="creator-date mb-5">
+                        by anonymous12345 on May 8th, 2022
+                    </p>
+                    <img src="images/news-5.jpg" class="w-100 mb-5" alt="">
+                    <p class="text-lg-start">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam quisquam corrupti nisi modi voluptatem sequi reprehenderit, ad, sint natus officiis qui ullam aut illo consequuntur et ratione ex tempore laborum dolor non fuga autem.
+                        Neque maiores aspernatur laborum ipsam alias provident quam cumque dolore perferendis. Praesentium eum quas ipsam soluta hic sequi, iusto asperiores temporibus voluptatibus vero. Odit, commodi? Modi, recusandae, laudantium ratione
+                        dolor aliquid architecto animi, ab ipsa doloremque amet repellat deleniti corporis asperiores facilis nihil autem earum vero. Dolorem atque dolorum omnis repellendus! Amet voluptate quisquam, iste sit impedit voluptatibus dolore,
+                        facere accusamus suscipit obcaecati accusantium enim itaque.
+                    </p>
+                    <p class="text-lg-start">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam quisquam corrupti nisi modi voluptatem sequi reprehenderit, ad, sint natus officiis qui ullam aut illo consequuntur et ratione ex tempore laborum dolor non fuga autem.
+                        Neque maiores aspernatur laborum ipsam alias provident quam cumque dolore perferendis. Praesentium eum quas ipsam soluta hic sequi, iusto asperiores temporibus voluptatibus vero. Odit, commodi? Modi, recusandae, laudantium ratione
+                        dolor aliquid architecto animi, ab ipsa doloremque amet repellat deleniti corporis asperiores facilis nihil autem earum vero. Dolorem atque dolorum omnis repellendus! Amet voluptate quisquam, iste sit impedit voluptatibus dolore,
+                        facere accusamus suscipit obcaecati accusantium enim itaque.
+                    </p>
+                    <p class="text-lg-start">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam quisquam corrupti nisi modi voluptatem sequi reprehenderit, ad, sint natus officiis qui ullam aut illo consequuntur et ratione ex tempore laborum dolor non fuga autem.
+                        Neque maiores aspernatur laborum ipsam alias provident quam cumque dolore perferendis. Praesentium eum quas ipsam soluta hic sequi, iusto asperiores temporibus voluptatibus vero. Odit, commodi? Modi, recusandae, laudantium ratione
+                        dolor aliquid architecto animi, ab ipsa doloremque amet repellat deleniti corporis asperiores facilis nihil autem earum vero. Dolorem atque dolorum omnis repellendus! Amet voluptate quisquam, iste sit impedit voluptatibus dolore,
+                        facere accusamus suscipit obcaecati accusantium enim itaque.
+                    </p>
+                    <p class="text-lg-start">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam quisquam corrupti nisi modi voluptatem sequi reprehenderit, ad, sint natus officiis qui ullam aut illo consequuntur et ratione ex tempore laborum dolor non fuga autem.
+                        Neque maiores aspernatur laborum ipsam alias provident quam cumque dolore perferendis. Praesentium eum quas ipsam soluta hic sequi, iusto asperiores temporibus voluptatibus vero. Odit, commodi? Modi, recusandae, laudantium ratione
+                        dolor aliquid architecto animi, ab ipsa doloremque amet repellat deleniti corporis asperiores facilis nihil autem earum vero. Dolorem atque dolorum omnis repellendus! Amet voluptate quisquam, iste sit impedit voluptatibus dolore,
+                        facere accusamus suscipit obcaecati accusantium enim itaque.
+                    </p>
+                    <p class="text-lg-start">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam quisquam corrupti nisi modi voluptatem sequi reprehenderit, ad, sint natus officiis qui ullam aut illo consequuntur et ratione ex tempore laborum dolor non fuga autem.
+                        Neque maiores aspernatur laborum ipsam alias provident quam cumque dolore perferendis. Praesentium eum quas ipsam soluta hic sequi, iusto asperiores temporibus voluptatibus vero. Odit, commodi? Modi, recusandae, laudantium ratione
+                        dolor aliquid architecto animi, ab ipsa doloremque amet repellat deleniti corporis asperiores facilis nihil autem earum vero. Dolorem atque dolorum omnis repellendus! Amet voluptate quisquam, iste sit impedit voluptatibus dolore,
+                        facere accusamus suscipit obcaecati accusantium enim itaque.
+                    </p>
+                    <p class="text-lg-start">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam quisquam corrupti nisi modi voluptatem sequi reprehenderit, ad, sint natus officiis qui ullam aut illo consequuntur et ratione ex tempore laborum dolor non fuga autem.
+                        Neque maiores aspernatur laborum ipsam alias provident quam cumque dolore perferendis. Praesentium eum quas ipsam soluta hic sequi, iusto asperiores temporibus voluptatibus vero. Odit, commodi? Modi, recusandae, laudantium ratione
+                        dolor aliquid architecto animi, ab ipsa doloremque amet repellat deleniti corporis asperiores facilis nihil autem earum vero. Dolorem atque dolorum omnis repellendus! Amet voluptate quisquam, iste sit impedit voluptatibus dolore,
+                        facere accusamus suscipit obcaecati accusantium enim itaque.
+                    </p>
+                </div>
+
+                <nav class="mt-5" aria-label="Page navigation">
+                    <ul class="pagination justify-content-center">
+                      <li class="page-item">
+                        <a class="page-link" href="news-4.html" aria-label="Previous">
+                          <span aria-hidden="true">&laquo;</span>
+                        </a>
+                      </li>
+                      <li class="page-item"><a class="page-link" href="news-1.html">1</a></li>
+                      <li class="page-item"><a class="page-link" href="news-2.html">2</a></li>
+                      <li class="page-item"><a class="page-link" href="news-3.html">3</a></li>
+                      <li class="page-item"><a class="page-link" href="news-4.html">4</a></li>
+                      <li class="page-item disabled"><a class="page-link" href="#">5</a></li>
+                      <li class="page-item">
+                        <a class="page-link disabled" href="#" aria-label="Next">
+                          <span aria-hidden="true">&raquo;</span>
+                        </a>
+                      </li>
+                    </ul>
+                </nav>
+            </div>
+
+        </div>
+    </main>
+    <!-- Footer -->
+    <footer class="d-flex container-lg rounded-top bg-danger align-items-center justify-content-center">
+        <p class="m-0 p-3 text-center">Copyright © 2022 DOTAOBSERVE. All rights reserved.</p>
+    </footer>
+</body>
+</html>

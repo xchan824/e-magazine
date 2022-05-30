@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VODs | DOTAOBSERVE</title>
+    <link rel="icon" type="image/x-icon" href="/images/Observer_Ward_model.png">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <!-- icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
+    <style>
+        body {
+            background-color: #222831;
+            color: white;
+        }
+
+        header, footer {
+            background-color: #F05454;
+        }
+
+        .separator {
+            display: flex;
+            align-items: center;
+            text-align: center;
+        }
+
+        .separator::before,
+        .separator::after {
+            content: '';
+            flex: 1;
+            border-bottom: 1px solid #DDDDDD;
+        }
+
+        .separator:not(:empty)::before {
+            margin-right: .25em;
+        }
+
+        .separator:not(:empty)::after {
+            margin-left: .25em;
+        }
+
+        .front-page {
+            background-color: #30475E;
+            margin-top: 10vh;
+        }
+
+        .creator-date {
+          font-size: 14px;
+        }
+        
+        dt {
+            margin-bottom: 0.8em;
+        }
+
+        dd {
+            display: list-item;
+            list-style-type: disc;
+            margin-left: 2em;
+        }
+
+        footer {
+            margin-top: 4vh;
+        }
+
+        .list-group-item.active {
+            background-color: #dc3545;
+            border-color: #dc3545;
+        }
+
+        a {
+          color: white;
+          text-decoration: none;
+          transition: transform .2s;
+        }
+
+        a:hover {
+          color: white;
+          transform: scale(1.07);
+        }
+
+    </style>
+</head>
+<body>
+    <nav class="navbar fixed-top container-lg rounded-bottom navbar-dark bg-danger navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand text-white" href="#">
+                <img src="images/Observer_Ward_model.png" width="40px" alt="">
+                DOTAOBSERVE
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="navbar-nav ms-auto">
+                  <a class="nav-link disabled fw-bold" aria-current="page" href="#">News</a>
+                  <a class="nav-link disabled fw-bold" href="#">DPC Rankings</a>
+                  <a class="nav-link disabled fw-bold" href="#">Patch Notes</a>
+                  <a class="nav-link active fw-bold" href="#vods">VODs</a>
+                </div>
+            </div>
+          </div>
+        </div>
+    </nav>
+    <main>
+        <!-- Main page -->
+        <div class="front-page container-lg p-3 rounded-3">
+
+            <!-- News -->
+            <div class="container-lg mb-5">
+                <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                    <ol class="breadcrumb fs-4">
+                        <li class="breadcrumb-item"><button type="button" class="btn btn-danger"><a href="index.html" class="text-light text-decoration-none">Home</a></button>
+                        <li class="breadcrumb-item active" aria-current="page"><button type="button" class="btn btn-secondary" disabled><a href="index.html" class="text-light text-decoration-none">VODs</a></button>
+                    </ol>
+                </nav>
+            </div>
+            
+            <div class="container-lg row m-0">
+                <div class="col-md">
+                    <a href="https://www.youtube.com/watch?v=jmVFD0tQGB8" target="_blank">
+                        <div class="ratio ratio-16x9">
+                            <img src="images\vod-thumbnail-1.png" alt="">
+                        </div>
+                        <p class="m-1">OG vs TSM FTX - GRAND FINAL 🏆 - ESL ONE STOCKHOLM 2022 MAJOR DOTA 2</p>
+                        <p class="creator-date m-1 mb-5">May 23, 2022</p>
+                    </a>
+                </div>
+                <div class="col-md">
+                    <a href="https://www.youtube.com/watch?v=jmVFD0tQGB8" target="_blank">
+                        <div class="ratio ratio-16x9">
+                            <img src="images\vod-thumbnail-2.png" alt="">
+                        </div>
+                        <p class="m-1">OG vs TUNDRA - SEMI-FINAL - ESL ONE STOCKHOLM 2022 MAJOR DOTA 2</p>
+                        <p class="creator-date m-1 mb-5">May 22, 2022</p>
+                    </a>
+                </div>
+                <div class="col-md">
+                    <a href="https://www.youtube.com/watch?v=jmVFD0tQGB8" target="_blank">
+                        <div class="ratio ratio-16x9">
+                            <img src="images\vod-thumbnail-3.png" alt="">
+                        </div>
+                        <p class="m-1">OG vs GAIMIN GLADIATORS - PLAYOFFS ELIMINATION - ESL ONE STOCKHOLM 2022 MAJOR DOTA 2</p>
+                        <p class="creator-date m-1 mb-5">May 22, 2022</p>
+                    </a>
+                </div>
+                <div class="col-md">
+                    <a href="https://www.youtube.com/watch?v=jmVFD0tQGB8" target="_blank">
+                        <div class="ratio ratio-16x9">
+                            <img src="images\vod-thumbnail-4.png" alt="">
+                        </div>
+                        <p class="m-1">TUNDRA vs TSM FTX - SEMI-FINAL - ESL ONE STOCKHOLM 2022 MAJOR DOTA 2</p>
+                        <p class="creator-date m-1 mb-5">May 22, 2022</p>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="container-lg row m-0">
+                <div class="col-md">
+                    <a href="https://www.youtube.com/watch?v=jmVFD0tQGB8" target="_blank">
+                        <div class="ratio ratio-16x9">
+                            <img src="images\vod-thumbnail-1.png" alt="">
+                        </div>
+                        <p class="m-1">OG vs TSM FTX - GRAND FINAL 🏆 - ESL ONE STOCKHOLM 2022 MAJOR DOTA 2</p>
+                        <p class="creator-date m-1 mb-5">May 23, 2022</p>
+                    </a>
+                </div>
+                <div class="col-md">
+                    <a href="https://www.youtube.com/watch?v=jmVFD0tQGB8" target="_blank">
+                        <div class="ratio ratio-16x9">
+                            <img src="images\vod-thumbnail-2.png" alt="">
+                        </div>
+                        <p class="m-1">OG vs TUNDRA - SEMI-FINAL - ESL ONE STOCKHOLM 2022 MAJOR DOTA 2</p>
+                        <p class="creator-date m-1 mb-5">May 22, 2022</p>
+                    </a>
+                </div>
+                <div class="col-md">
+                    <a href="https://www.youtube.com/watch?v=jmVFD0tQGB8" target="_blank">
+                        <div class="ratio ratio-16x9">
+                            <img src="images\vod-thumbnail-3.png" alt="">
+                        </div>
+                        <p class="m-1">OG vs GAIMIN GLADIATORS - PLAYOFFS ELIMINATION - ESL ONE STOCKHOLM 2022 MAJOR DOTA 2</p>
+                        <p class="creator-date m-1 mb-5">May 22, 2022</p>
+                    </a>
+                </div>
+                <div class="col-md">
+                    <a href="https://www.youtube.com/watch?v=jmVFD0tQGB8" target="_blank">
+                        <div class="ratio ratio-16x9">
+                            <img src="images\vod-thumbnail-4.png" alt="">
+                        </div>
+                        <p class="m-1">TUNDRA vs TSM FTX - SEMI-FINAL - ESL ONE STOCKHOLM 2022 MAJOR DOTA 2</p>
+                        <p class="creator-date m-1 mb-5">May 22, 2022</p>
+                    </a>
+                </div>
+            </div>
+
+            <div class="container-lg row m-0">
+                <div class="col-md">
+                    <a href="https://www.youtube.com/watch?v=jmVFD0tQGB8" target="_blank">
+                        <div class="ratio ratio-16x9">
+                            <img src="images\vod-thumbnail-1.png" alt="">
+                        </div>
+                        <p class="m-1">OG vs TSM FTX - GRAND FINAL 🏆 - ESL ONE STOCKHOLM 2022 MAJOR DOTA 2</p>
+                        <p class="creator-date m-1 mb-5">May 23, 2022</p>
+                    </a>
+                </div>
+                <div class="col-md">
+                    <a href="https://www.youtube.com/watch?v=jmVFD0tQGB8" target="_blank">
+                        <div class="ratio ratio-16x9">
+                            <img src="images\vod-thumbnail-2.png" alt="">
+                        </div>
+                        <p class="m-1">OG vs TUNDRA - SEMI-FINAL - ESL ONE STOCKHOLM 2022 MAJOR DOTA 2</p>
+                        <p class="creator-date m-1 mb-5">May 22, 2022</p>
+                    </a>
+                </div>
+                <div class="col-md">
+                    <a href="https://www.youtube.com/watch?v=jmVFD0tQGB8" target="_blank">
+                        <div class="ratio ratio-16x9">
+                            <img src="images\vod-thumbnail-3.png" alt="">
+                        </div>
+                        <p class="m-1">OG vs GAIMIN GLADIATORS - PLAYOFFS ELIMINATION - ESL ONE STOCKHOLM 2022 MAJOR DOTA 2</p>
+                        <p class="creator-date m-1 mb-5">May 22, 2022</p>
+                    </a>
+                </div>
+                <div class="col-md">
+                    <a href="https://www.youtube.com/watch?v=jmVFD0tQGB8" target="_blank">
+                        <div class="ratio ratio-16x9">
+                            <img src="images\vod-thumbnail-4.png" alt="">
+                        </div>
+                        <p class="m-1">TUNDRA vs TSM FTX - SEMI-FINAL - ESL ONE STOCKHOLM 2022 MAJOR DOTA 2</p>
+                        <p class="creator-date m-1 mb-5">May 22, 2022</p>
+                    </a>
+                </div>
+            </div>
+
+            <div class="container-lg row m-0">
+                <div class="col-md">
+                    <a href="https://www.youtube.com/watch?v=jmVFD0tQGB8" target="_blank">
+                        <div class="ratio ratio-16x9">
+                            <img src="images\vod-thumbnail-1.png" alt="">
+                        </div>
+                        <p class="m-1">OG vs TSM FTX - GRAND FINAL 🏆 - ESL ONE STOCKHOLM 2022 MAJOR DOTA 2</p>
+                        <p class="creator-date m-1 mb-5">May 23, 2022</p>
+                    </a>
+                </div>
+                <div class="col-md">
+                    <a href="https://www.youtube.com/watch?v=jmVFD0tQGB8" target="_blank">
+                        <div class="ratio ratio-16x9">
+                            <img src="images\vod-thumbnail-2.png" alt="">
+                        </div>
+                        <p class="m-1">OG vs TUNDRA - SEMI-FINAL - ESL ONE STOCKHOLM 2022 MAJOR DOTA 2</p>
+                        <p class="creator-date m-1 mb-5">May 22, 2022</p>
+                    </a>
+                </div>
+                <div class="col-md">
+                    <a href="https://www.youtube.com/watch?v=jmVFD0tQGB8" target="_blank">
+                        <div class="ratio ratio-16x9">
+                            <img src="images\vod-thumbnail-3.png" alt="">
+                        </div>
+                        <p class="m-1">OG vs GAIMIN GLADIATORS - PLAYOFFS ELIMINATION - ESL ONE STOCKHOLM 2022 MAJOR DOTA 2</p>
+                        <p class="creator-date m-1 mb-5">May 22, 2022</p>
+                    </a>
+                </div>
+                <div class="col-md">
+                    <a href="https://www.youtube.com/watch?v=jmVFD0tQGB8" target="_blank">
+                        <div class="ratio ratio-16x9">
+                            <img src="images\vod-thumbnail-4.png" alt="">
+                        </div>
+                        <p class="m-1">TUNDRA vs TSM FTX - SEMI-FINAL - ESL ONE STOCKHOLM 2022 MAJOR DOTA 2</p>
+                        <p class="creator-date m-1 mb-5">May 22, 2022</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- Footer -->
+    <footer class="d-flex container-lg rounded-top bg-danger align-items-center justify-content-center">
+        <p class="m-0 p-3 text-center">Copyright © 2022 DOTAOBSERVE. All rights reserved.</p>
+    </footer>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</body>
+</html>
