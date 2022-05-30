@@ -25,3 +25,8 @@ HTML, Vanilla CSS, Bootstrap 5.2
 <img src="images\sitemap.PNG" alt="">
 
 <h2>Inspirations</h2>
+
+<p>https://www.gosugamers.net/dota2</p>
+<p>https://www.joindota.com/</p>
+<p>https://www.dotabuff.com/</p>
+<p>https://liquipedia.net/dota2/Main_Page</p>
