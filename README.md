@@ -13,11 +13,13 @@ HTML, Vanilla CSS, Bootstrap 5.2
 
 <h2>Deliverables and Goals</h2>
 
+<ul>
 • Project Timeline
-	Homepage – 1 day
-	Subpages – 1 day each, 4 pages, total of 4 days
-	Furnishing of pages – until deadline of submission
-
+    <li>Homepage – 1 day</li>
+    <li>Subpages – 1 day each, 4 pages, total of 4 days</li>
+    <li>Furnishing of pages – until deadline of submission</li>
+</ul>
+	
 • Responsive web design should be used in every web page whenever possible. Designing for mobile is top priority.
 
 <h2>Hierarchical Sitemap</h2>
@@ -30,3 +32,9 @@ HTML, Vanilla CSS, Bootstrap 5.2
 <p>https://www.joindota.com/</p>
 <p>https://www.dotabuff.com/</p>
 <p>https://liquipedia.net/dota2/Main_Page</p>
+
+<h2>Conclusions, Challenges and Future Improvements (my opinions only)</h2>
+
+• Bootstrap does not scale well with project sizes
+• Overall web page design can be improved further
+
